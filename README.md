@@ -21,6 +21,7 @@ Use selected variables from this data set (price, region, country...), to build 
 * Heroku
 
 ## List of Visualizations
+Tableau :
 * Relation between alcohol percentage and quality
 * Correlation between various factors
 * Relation between quality of wine as on fixed acidity
