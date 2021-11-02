@@ -28,7 +28,7 @@ the features for input to machine learning models
 RandomForestClassifier, Deep Neural to train models and evaluate 
 models using testing data to choose the model with highest 
 performance score 
-4. Melissa/Shuchi/Joshua - HTML/CSS : build up webpage with user data selection based on our features 
+4. Melissa/Shuchi - HTML/CSS : build up webpage with user data selection based on our features 
 5. Shuchi/Megan - Tableau: – visualization 
 6. Joshua - Flask
 7. Megan - Heroku 
