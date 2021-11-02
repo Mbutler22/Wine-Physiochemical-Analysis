@@ -19,8 +19,11 @@ We will try to use models to select most relevant variables by testing feature s
 
 
 ## List of Visualizations
+Tableau:
+* Relation between alcohol percentage and quality
+* Correlation between various factors
+* Relation between quality of wine as on fixed acidity
 
-* 
 
 ## Project Outline
 1. Melissa - ETL: Extract Data from : csv files, json
