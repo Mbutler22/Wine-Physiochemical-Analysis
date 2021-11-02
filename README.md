@@ -29,10 +29,10 @@ be able to predict quality of wine.
 2. Dasa/Tinu/Joshua - Use Pandas Jupyter Notebook for data preprocessing and selection of the features for input to machine learning models
 3. Dasa/Tinu/Joshua - Machine Learning : we plan to use LinearRegression, RandomForestClassifier, SVM, KNN (plus unsupervised models) to train models and evaluate models using testing data to choose the model with highest performance score 
 4. Melissa/Shuchi/Joshua - HTML/CSS : build up interactive webpage  
-5. Shuchi/Megan - Tableau: – visualizations:
-  * Relation between alcohol percentage and quality
-  * Correlation between various factors
-  * Relation between quality of wine as on fixed acidity
+5. Shuchi/Megan - Tableau visualizations:
+     * Relation between alcohol percentage and quality
+     * Correlation between various factors
+     * Relation between quality of wine as on fixed acidity
 7. Joshua - Flask
 8. Megan - Heroku 
 
