@@ -12,15 +12,11 @@ We will leverage data from two datasets, related to red and white variants of th
 As mentioned in the resource, there are only physicochemical (inputs) and sensory (the output) variables available (e.g., there is no data about grape types, wine brand, wine selling price, etc.). We will try to use models to select most relevant variables by testing feature selection methods.
 
 ## Data Sources
-=======
+
 * https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv)
 (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.)
 Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, 
 Elsevier, 47(4):547-553, 2009.)
-<<<<<<< HEAD
-Optional: https://www.kaggle.com/christopheiv/winemagdata130k
-Use selected variables from this data set (price, region, country...), to build the machine learning model to be able to predict quality of wine.
-=======
 * Optional: https://www.kaggle.com/christopheiv/winemagdata130k
 Use selected variables from this data set (price, region, country...), to build the machine learning model to 
 be able to predict quality of wine.
@@ -34,20 +30,6 @@ be able to predict quality of wine.
 * Heroku
 
 
-
-## List of Visualizations
-
-*  
-* 
-* 
-=======
-Tableau :
-* Relation between alcohol percentage and quality
-* Correlation between various factors
-* Relation between quality of wine as on fixed acidity
-* 
-
-=======
 
 ## Project Outline
 1. Melissa - ETL: Extract Data from : csv files, json
