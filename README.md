@@ -43,7 +43,6 @@ be able to predict quality of wine.
 7. Joshua - Flask
 8. Megan - Heroku 
 
-
 ## Team Members
 * Melissa Diep
 * Shuchi Khandelwal
