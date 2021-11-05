@@ -28,7 +28,7 @@ Tableau :
 * 
 
 ## Project Outline
-1. Melissa - ETL: Extract Data from : csv files, json
+1. Shuchi - ETL: Extract Data from : csv files, json
 2. Dasa/Tinu/Joshua - Use Pandas Jupyter Notebook for data preprocessing and selection of 
 the features for input to machine learning models
 3. Dasa/Tinu/Joshua - Machine Learning : we plan to use LinearRegression, 
