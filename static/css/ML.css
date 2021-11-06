@@ -65,5 +65,27 @@ html {
     border-radius: 2px;
     height: 10px;
   }
-  
 
+  .form-red::-webkit-slider-thumb {
+    background: rgb(110, 5, 5);
+  }
+  
+  .form-red::-moz-range-thumb {
+    background: rgb(110, 5, 5);
+  }
+  
+  .form-red::-ms-thumb {
+    background: rgb(110, 5, 5);
+  }
+ 
+  .form-white::-webkit-slider-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-moz-range-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-ms-thumb {
+    background: rgb(249, 250, 169);
+  }
