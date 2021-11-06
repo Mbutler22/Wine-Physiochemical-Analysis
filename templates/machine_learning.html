@@ -71,7 +71,7 @@
                                 </label>
                                 <span style="color:rgb(136, 9, 9)" id="v"></span>
                                 <input type="range" class="form-range form-red" min="0.12" max="1.58" step="0.01"
-                                    value="0.5" name="rvolacidity" id="rvolacidity">
+                                    value="{{rvolacidity}}" name="rvolacidity" id="rvolacidity">
                                 <script>
                                     var slidePic = document.getElementById("rvolacidity");
                                     var v = document.getElementById("v");
@@ -89,7 +89,7 @@
                                 <label for="rTotalSulfur" class="form-label text-left">Total Sulfur 6.0 - 289.0 </label>
                                 <span style="color:rgb(136, 9, 9)" id="b"></span>
                                 <input type="range" class="form-range form-red" min="6.0" max="289.0" step="0.1"
-                                    value="135.0" name="rTotalSulfur" id="rTotalSulfur">
+                                    value="{{rTotalSulfur}}" name="rTotalSulfur" id="rTotalSulfur">
                                 <script>
                                     var slidePic = document.getElementById("rTotalSulfur");
                                     var b = document.getElementById("b");
@@ -107,7 +107,7 @@
                                 <label for="rDensity" class="form-label text-left"> Density 0.990 - 1.003 </label>
                                 <span style="color:rgb(136, 9, 9)" id="c"></span>
                                 <input type="range" class="form-range form-red" min="0.990" max="1.003" step="0.001"
-                                    value="0.995" name="rDensity" id="rDensity">
+                                    value="{{rDensity}}" name="rDensity" id="rDensity">
                                 <script>
                                     var slidePic = document.getElementById("rDensity");
                                     var c = document.getElementById("c");
@@ -125,7 +125,7 @@
                                 <label for="rSulfates" class="form-label text-left"> Sulfates 0.33 - 2.00 </label>
                                 <span style="color:rgb(136, 9, 9)" id="a"></span>
                                 <input type="range" class="form-range form-red" min="0.33" max="2.00" step="0.01"
-                                    value="0.8" name="rSulfates" id="rSulfates">
+                                    value="{{rSulfates}}" name="rSulfates" id="rSulfates">
                                 <script>
                                     var slidePic = document.getElementById("rSulfates");
                                     var a = document.getElementById("a");
@@ -143,7 +143,7 @@
                                 <label for="rAlcohol" class="form-label text-left"> Alcohol 8.4 - 14.9 </label>
                                 <span style="color:rgb(136, 9, 9)" id="d"></span>
                                 <input type="range" class="form-range form-red" min="8.4" max="14.9" step="0.1"
-                                    value="9.8" name="rAlcohol" id="rAlcohol">
+                                    value="{{rAlcohol}}" name="rAlcohol" id="rAlcohol">
                                 <script>
                                     var slidePic = document.getElementById("rAlcohol");
                                     var d = document.getElementById("d");
@@ -184,12 +184,12 @@
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <label for="Acidity" class="form-label  text-left">Fixed Acidity 4.6 - 15.9 </label>
+                                <label for="wAcidity" class="form-label  text-left"> Volatile Acidity 0.08 - 1.10 </label>
                                 <span style="color:rgb(249, 250, 169)" id="e"></span>
-                                <input type="range" class="form-range form-white" min="4.6" max="15.9" step="0.1"
-                                    value="10.5" id="Acidity">
+                                <input type="range" class="form-range form-white" min="0.08" max="1.10" step="0.01"
+                                    value="{{wAcidity}}" id="wAcidity">
                                 <script>
-                                    var slidePic = document.getElementById("Acidity");
+                                    var slidePic = document.getElementById("wAcidity");
                                     var e = document.getElementById("e");
                                     e.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
@@ -202,12 +202,12 @@
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <label for="FreeSulfur" class="form-label">Free Sulfur Dioxide 1.0 - 72.0 </label>
+                                <label for="wFreeSulfur" class="form-label">Free Sulfur Dioxide 2.0 - 289.0 </label>
                                 <span style="color:rgb(249, 250, 169)" id="f"></span>
-                                <input type="range" class="form-range form-white" min="1.0" max="72.0" step="0.1"
-                                    value="35.0" id="FreeSulfur">
+                                <input type="range" class="form-range form-white" min="2.0" max="289.0" step="1.0"
+                                    value="{{wFreeSulfur}}" id="wFreeSulfur">
                                 <script>
-                                    var slidePic = document.getElementById("FreeSulfur");
+                                    var slidePic = document.getElementById("wFreeSulfur");
                                     var f = document.getElementById("f");
                                     f.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
@@ -220,12 +220,12 @@
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <label for="TotalSulfur" class="form-label">Total Sulfur 6.0 - 289.0 </label>
+                                <label for="wDensity" class="form-label"> Density 0.987 - 1.038 </label>
                                 <span style="color:rgb(249, 250, 169)" id="g"></span>
-                                <input type="range" class="form-range form-white" min="6.0" max="289.0" step="0.1"
-                                    value="135.0" id="TotalSulfur">
+                                <input type="range" class="form-range form-white" min="0.987" max="1.038" step="0.001"
+                                    value="{{wDensity}}" id="wDensity">
                                 <script>
-                                    var slidePic = document.getElementById("TotalSulfur");
+                                    var slidePic = document.getElementById("wDensity");
                                     var g = document.getElementById("g");
                                     g.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
@@ -235,33 +235,16 @@
                                 </script>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="Sulfates" class="form-label"> Sulfates 0.33 - 2.0 </label>
-                                <span style="color:rgb(249, 250, 169)" id="h"></span>
-                                <input type="range" class="form-range form-white" min="0.33" max="2.0" step="0.1"
-                                    value="1.0" id="Sulfates">
-                                <script>
-                                    var slidePic = document.getElementById("Sulfates");
-                                    var h = document.getElementById("h");
-                                    h.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
-                                    slidePic.oninput = function () {
-                                        h.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <label for="Alcohol" class="form-label"> Alcohol 8.4 - 14.9 </label>
+                                <label for="wAlcohol" class="form-label"> Alcohol 8.0 - 14.2 </label>
                                 <span style="color:rgb(249, 250, 169)" id="i"></span>
-                                <input type="range" class="form-range form-white" min="8.4" max="14.9" step="0.1"
-                                    value="11.0" id="Alcohol">
+                                <input type="range" class="form-range form-white" min="8.0" max="14.2" step="0.1"
+                                    value="{{wAlcohol}}" id="wAlcohol">
                                 <script>
-                                    var slidePic = document.getElementById("Alcohol");
+                                    var slidePic = document.getElementById("wAlcohol");
                                     var i = document.getElementById("i");
                                     i.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
@@ -272,6 +255,8 @@
                             </div>
                         </div>
                         </p>
+                        <br>
+                        <br>
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-primary">Check Quality</button>
