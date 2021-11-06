@@ -187,7 +187,7 @@
                                 <label for="wAcidity" class="form-label  text-left"> Volatile Acidity 0.08 - 1.10 </label>
                                 <span style="color:rgb(249, 250, 169)" id="e"></span>
                                 <input type="range" class="form-range form-white" min="0.08" max="1.10" step="0.01"
-                                    value="{{wAcidity}}" id="wAcidity">
+                                    value="{{wAcidity}}" name = "wAcidity" id="wAcidity">
                                 <script>
                                     var slidePic = document.getElementById("wAcidity");
                                     var e = document.getElementById("e");
@@ -205,7 +205,7 @@
                                 <label for="wFreeSulfur" class="form-label">Free Sulfur Dioxide 2.0 - 289.0 </label>
                                 <span style="color:rgb(249, 250, 169)" id="f"></span>
                                 <input type="range" class="form-range form-white" min="2.0" max="289.0" step="1.0"
-                                    value="{{wFreeSulfur}}" id="wFreeSulfur">
+                                    value="{{wFreeSulfur}}" name = "wFreeSulfur" id="wFreeSulfur">
                                 <script>
                                     var slidePic = document.getElementById("wFreeSulfur");
                                     var f = document.getElementById("f");
@@ -223,7 +223,7 @@
                                 <label for="wDensity" class="form-label"> Density 0.987 - 1.038 </label>
                                 <span style="color:rgb(249, 250, 169)" id="g"></span>
                                 <input type="range" class="form-range form-white" min="0.987" max="1.038" step="0.001"
-                                    value="{{wDensity}}" id="wDensity">
+                                    value="{{wDensity}}" name = "wDensity" id="wDensity">
                                 <script>
                                     var slidePic = document.getElementById("wDensity");
                                     var g = document.getElementById("g");
@@ -242,7 +242,7 @@
                                 <label for="wAlcohol" class="form-label"> Alcohol 8.0 - 14.2 </label>
                                 <span style="color:rgb(249, 250, 169)" id="i"></span>
                                 <input type="range" class="form-range form-white" min="8.0" max="14.2" step="0.1"
-                                    value="{{wAlcohol}}" id="wAlcohol">
+                                    value="{{wAlcohol}}" name = "wAlcohol" id="wAlcohol">
                                 <script>
                                     var slidePic = document.getElementById("wAlcohol");
                                     var i = document.getElementById("i");
@@ -263,14 +263,17 @@
                             </div>
                         </div>
                     </form>
+                    <div class="row justify-content-center align-items-center text-center">
+                        <div class="col-lg-3 text-center">
+                            <span style="color:rgb(249, 250, 169)"></span>
+                            <br>
+                            {{woutcome}}
+                        </div>
+                        <div class="col-lg-3 text-center">
+                        </div>
+                    </div>
+                </div>
 
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-3 text-center">
-                    </div>
-                    <div class="col-lg-3 text-center">
-                    </div>
-                </div>
 
             </div>
         </div>
