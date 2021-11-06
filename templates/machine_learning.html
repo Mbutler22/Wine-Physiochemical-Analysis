@@ -162,7 +162,6 @@
                             </div>
                         </div>
                     </form>
-
                     <div class="row justify-content-center align-items-center text-center">
                         <div class="col-lg-3 text-center">
                             <span style="color:rgb(136, 9, 9)"></span>
@@ -179,106 +178,105 @@
                 <div class="col-lg-12 justify-content-center align-items-center text-center">
                     <h5 style="color:rgb(249, 250, 169);font-size:20px">White Wine</h5>
                 </div>
-                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                <div class="col-lg-12 justify-content-center align-items-center">
                     <form class="col-lg-12" action="{{ url_for('white_data') }}" method="post">
-                        <div class="col-lg-12 text-center">
-                            <p>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <label for="Acidity" class="form-label  text-left">Fixed Acidity 4.6 - 15.9 </label>
-                                    <span style="color:rgb(249, 250, 169)" id="e"></span>
-                                    <input type="range" class="form-range form-white" min="4.6" max="15.9" step="0.1"
-                                        value="10.5" id="Acidity">
-                                    <script>
-                                        var slidePic = document.getElementById("Acidity");
-                                        var e = document.getElementById("e");
-                                        e.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+                        <p>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <label for="Acidity" class="form-label  text-left">Fixed Acidity 4.6 - 15.9 </label>
+                                <span style="color:rgb(249, 250, 169)" id="e"></span>
+                                <input type="range" class="form-range form-white" min="4.6" max="15.9" step="0.1"
+                                    value="10.5" id="Acidity">
+                                <script>
+                                    var slidePic = document.getElementById("Acidity");
+                                    var e = document.getElementById("e");
+                                    e.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
-                                        slidePic.oninput = function () {
-                                            e.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                        }
-                                    </script>
-                                </div>
+                                    slidePic.oninput = function () {
+                                        e.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                    }
+                                </script>
                             </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <label for="FreeSulfur" class="form-label">Free Sulfur Dioxide 1.0 - 72.0 </label>
-                                    <span style="color:rgb(249, 250, 169)" id="f"></span>
-                                    <input type="range" class="form-range form-white" min="1.0" max="72.0" step="0.1"
-                                        value="35.0" id="FreeSulfur">
-                                    <script>
-                                        var slidePic = document.getElementById("FreeSulfur");
-                                        var f = document.getElementById("f");
-                                        f.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <label for="FreeSulfur" class="form-label">Free Sulfur Dioxide 1.0 - 72.0 </label>
+                                <span style="color:rgb(249, 250, 169)" id="f"></span>
+                                <input type="range" class="form-range form-white" min="1.0" max="72.0" step="0.1"
+                                    value="35.0" id="FreeSulfur">
+                                <script>
+                                    var slidePic = document.getElementById("FreeSulfur");
+                                    var f = document.getElementById("f");
+                                    f.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
-                                        slidePic.oninput = function () {
-                                            f.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                        }
-                                    </script>
-                                </div>
+                                    slidePic.oninput = function () {
+                                        f.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                    }
+                                </script>
                             </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <label for="TotalSulfur" class="form-label">Total Sulfur 6.0 - 289.0 </label>
-                                    <span style="color:rgb(249, 250, 169)" id="g"></span>
-                                    <input type="range" class="form-range form-white" min="6.0" max="289.0" step="0.1"
-                                        value="135.0" id="TotalSulfur">
-                                    <script>
-                                        var slidePic = document.getElementById("TotalSulfur");
-                                        var g = document.getElementById("g");
-                                        g.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <label for="TotalSulfur" class="form-label">Total Sulfur 6.0 - 289.0 </label>
+                                <span style="color:rgb(249, 250, 169)" id="g"></span>
+                                <input type="range" class="form-range form-white" min="6.0" max="289.0" step="0.1"
+                                    value="135.0" id="TotalSulfur">
+                                <script>
+                                    var slidePic = document.getElementById("TotalSulfur");
+                                    var g = document.getElementById("g");
+                                    g.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
-                                        slidePic.oninput = function () {
-                                            g.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                        }
-                                    </script>
-                                </div>
+                                    slidePic.oninput = function () {
+                                        g.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                    }
+                                </script>
                             </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <label for="Sulfates" class="form-label"> Sulfates 0.33 - 2.0 </label>
-                                    <span style="color:rgb(249, 250, 169)" id="h"></span>
-                                    <input type="range" class="form-range form-white" min="0.33" max="2.0" step="0.1"
-                                        value="1.0" id="Sulfates">
-                                    <script>
-                                        var slidePic = document.getElementById("Sulfates");
-                                        var h = document.getElementById("h");
-                                        h.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <label for="Sulfates" class="form-label"> Sulfates 0.33 - 2.0 </label>
+                                <span style="color:rgb(249, 250, 169)" id="h"></span>
+                                <input type="range" class="form-range form-white" min="0.33" max="2.0" step="0.1"
+                                    value="1.0" id="Sulfates">
+                                <script>
+                                    var slidePic = document.getElementById("Sulfates");
+                                    var h = document.getElementById("h");
+                                    h.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
-                                        slidePic.oninput = function () {
-                                            h.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                        }
-                                    </script>
-                                </div>
+                                    slidePic.oninput = function () {
+                                        h.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                    }
+                                </script>
                             </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <label for="Alcohol" class="form-label"> Alcohol 8.4 - 14.9 </label>
-                                    <span style="color:rgb(249, 250, 169)" id="i"></span>
-                                    <input type="range" class="form-range form-white" min="8.4" max="14.9" step="0.1"
-                                        value="11.0" id="Alcohol">
-                                    <script>
-                                        var slidePic = document.getElementById("Alcohol");
-                                        var i = document.getElementById("i");
-                                        i.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <label for="Alcohol" class="form-label"> Alcohol 8.4 - 14.9 </label>
+                                <span style="color:rgb(249, 250, 169)" id="i"></span>
+                                <input type="range" class="form-range form-white" min="8.4" max="14.9" step="0.1"
+                                    value="11.0" id="Alcohol">
+                                <script>
+                                    var slidePic = document.getElementById("Alcohol");
+                                    var i = document.getElementById("i");
+                                    i.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
-                                        slidePic.oninput = function () {
-                                            i.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                        }
-                                    </script>
-                                </div>
+                                    slidePic.oninput = function () {
+                                        i.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                    }
+                                </script>
                             </div>
-                            </p>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Check Quality</button>
-                                </div>
+                        </div>
+                        </p>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-primary">Check Quality</button>
                             </div>
+                        </div>
                     </form>
 
                 </div>
