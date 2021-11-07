@@ -89,3 +89,8 @@ html {
   .form-white::-ms-thumb {
     background: rgb(249, 250, 169);
   }
+  .outcome {
+    font-family: "Sofia", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+  }
