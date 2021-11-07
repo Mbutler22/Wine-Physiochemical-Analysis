@@ -45,289 +45,312 @@
     </nav>
 
     <div class="row">
-    <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
 
-    <div class="container-fluid col-md-8"
-    style="background-color: rgba(0,0,0,.6);overflow:scroll;  height: 90vh; margin-top: 20px; margin-bottom: 20px; border:1px solid #cecece">
-    <!-- style="background-color: rgba(0,0,0,.6);overflow:scroll;  margin-top: 50px; width: 1300px; height: 700px; margin-left: 440px; border:1px solid #cecece"> -->
-        <div class="row">
-            <div class="col-lg-12 justify-content-center align-items-center text-center">
-                <br>
-                <h4><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false" aria-controls="collapseDesc">
-                     About Our Model</a></h4>
-                <br>
-                <h5><div class="collapse" id="collapseDesc">
-                    <div class="card card-body" style="background-color: rgba(0,0,0,.6);">
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                    </div>
-                  </div></h5>
-                <br>
-                <h4> Your Wine Properties</h4>
-
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12 justify-content-center align-items-center text-center">
-                    <h5 style="color:rgb(136, 9, 9);font-size:20px">Red Wine</h5>
-                </div>
-                <div class="col-lg-12 justify-content-center align-items-center">
-                    <form class="col-lg-12" action="{{ url_for('red_data') }}" method="post">
-                        <p>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="rvolacidity" class="form-label text-left">Volatile Acidity 0.12 - 1.58
-                                </label>
-                                <span style="color:rgb(136, 9, 9)" id="v"></span>
-                                <input type="range" class="form-range form-red" min="0.12" max="1.58" step="0.01"
-                                    value="{{rvolacidity}}" name="rvolacidity" id="rvolacidity">
-                                <script>
-                                    var slidePic = document.getElementById("rvolacidity");
-                                    var v = document.getElementById("v");
-                                    v.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        v.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="rTotalSulfur" class="form-label text-left">Total Sulfur 6.0 - 289.0 </label>
-                                <span style="color:rgb(136, 9, 9)" id="b"></span>
-                                <input type="range" class="form-range form-red" min="6.0" max="289.0" step="0.1"
-                                    value="{{rTotalSulfur}}" name="rTotalSulfur" id="rTotalSulfur">
-                                <script>
-                                    var slidePic = document.getElementById("rTotalSulfur");
-                                    var b = document.getElementById("b");
-                                    b.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        b.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="rDensity" class="form-label text-left"> Density 0.990 - 1.003 </label>
-                                <span style="color:rgb(136, 9, 9)" id="c"></span>
-                                <input type="range" class="form-range form-red" min="0.990" max="1.003" step="0.001"
-                                    value="{{rDensity}}" name="rDensity" id="rDensity">
-                                <script>
-                                    var slidePic = document.getElementById("rDensity");
-                                    var c = document.getElementById("c");
-                                    c.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        c.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="rSulfates" class="form-label text-left"> Sulfates 0.33 - 2.00 </label>
-                                <span style="color:rgb(136, 9, 9)" id="a"></span>
-                                <input type="range" class="form-range form-red" min="0.33" max="2.00" step="0.01"
-                                    value="{{rSulfates}}" name="rSulfates" id="rSulfates">
-                                <script>
-                                    var slidePic = document.getElementById("rSulfates");
-                                    var a = document.getElementById("a");
-                                    a.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        a.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="rAlcohol" class="form-label text-left"> Alcohol 8.4 - 14.9 </label>
-                                <span style="color:rgb(136, 9, 9)" id="d"></span>
-                                <input type="range" class="form-range form-red" min="8.4" max="14.9" step="0.1"
-                                    value="{{rAlcohol}}" name="rAlcohol" id="rAlcohol">
-                                <script>
-                                    var slidePic = document.getElementById("rAlcohol");
-                                    var d = document.getElementById("d");
-                                    d.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        d.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        </p>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary">Check Quality</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="row justify-content-center align-items-center text-center">
-                        <div class="col-md-12 text-center outcome">
-                            <span style="color:rgb(136, 9, 9)">
-                            <br>
-                            {{routcome}}
-                        </span>    
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
+        <div class="container-fluid col-md-8"
+            style="background-color: rgba(0,0,0,.6);overflow:scroll;  height: 90vh; margin-top: 20px; margin-bottom: 20px; border:1px solid #cecece">
+            <!-- style="background-color: rgba(0,0,0,.6);overflow:scroll;  margin-top: 50px; width: 1300px; height: 700px; margin-left: 440px; border:1px solid #cecece"> -->
+            <div class="row">
                 <div class="col-lg-12 justify-content-center align-items-center text-center">
-                    <h5 style="color:rgb(249, 250, 169);font-size:20px">White Wine</h5>
-                </div>
-                <div class="col-lg-12 justify-content-center align-items-center">
-                    <form class="col-lg-12" action="{{ url_for('white_data') }}" method="post">
-                        <p>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="wAcidity" class="form-label  text-left"> Volatile Acidity 0.08 - 1.10 </label>
-                                <span style="color:rgb(249, 250, 169)" id="e"></span>
-                                <input type="range" class="form-range form-white" min="0.08" max="1.10" step="0.01"
-                                    value="{{wAcidity}}" name = "wAcidity" id="wAcidity">
-                                <script>
-                                    var slidePic = document.getElementById("wAcidity");
-                                    var e = document.getElementById("e");
-                                    e.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        e.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="wFreeSulfur" class="form-label">Free Sulfur Dioxide 2.0 - 289.0 </label>
-                                <span style="color:rgb(249, 250, 169)" id="f"></span>
-                                <input type="range" class="form-range form-white" min="2.0" max="289.0" step="1.0"
-                                    value="{{wFreeSulfur}}" name = "wFreeSulfur" id="wFreeSulfur">
-                                <script>
-                                    var slidePic = document.getElementById("wFreeSulfur");
-                                    var f = document.getElementById("f");
-                                    f.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        f.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="wDensity" class="form-label"> Density 0.987 - 1.038 </label>
-                                <span style="color:rgb(249, 250, 169)" id="g"></span>
-                                <input type="range" class="form-range form-white" min="0.987" max="1.038" step="0.001"
-                                    value="{{wDensity}}" name = "wDensity" id="wDensity">
-                                <script>
-                                    var slidePic = document.getElementById("wDensity");
-                                    var g = document.getElementById("g");
-                                    g.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        g.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <label for="wAlcohol" class="form-label"> Alcohol 8.0 - 14.2 </label>
-                                <span style="color:rgb(249, 250, 169)" id="i"></span>
-                                <input type="range" class="form-range form-white" min="8.0" max="14.2" step="0.1"
-                                    value="{{wAlcohol}}" name = "wAlcohol" id="wAlcohol">
-                                <script>
-                                    var slidePic = document.getElementById("wAlcohol");
-                                    var i = document.getElementById("i");
-                                    i.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
-
-                                    slidePic.oninput = function () {
-                                        i.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
-                                    }
-                                </script>
-                            </div>
-                        </div>
-                        </p>
-                        <br>
-                        <br>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary">Check Quality</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="row justify-content-center align-items-center text-center">
-                        <div class="col-md-12 text-center outcome" >
-                            <span style="color:rgb(249, 250, 169)">
-                            <br>
-                            {{woutcome}}
-                        </span>    
-                        </div>
-                        
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-lg-12 justify-content-center align-items-center text-center">
-                <br>
-                <br>
-                <h5>World Wines</h5>
-            </div>
-
-
-            <div class="col-lg-12 justify-content-center align-items-center text-center">
-                <div class="col-lg-12 text-center">
-
-                    <p>
-                    <h4> Wine Quality Results</h4>
                     <br>
-                    <br></p>
+                    <h4><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
+                            aria-controls="collapseDesc">
+                            About Our Model</a></h4>
+                    <br>
+                    <h5>
+                        <div class="collapse" id="collapseDesc">
+                            <div class="card card-body" style="background-color: rgba(0,0,0,.6);">
+                                Some placeholder content for the collapse component. This panel is hidden by default but
+                                revealed when the user activates the relevant trigger.
+                                <br>
+                                kdkrep'dkrp'
+                                <br>
+                                lrjktpek
+                                etjk'pwp
+                            </div>
+                        </div>
+                    </h5>
+                    <br>
+                    <h4> Your Wine Properties</h4>
 
                 </div>
-                <br>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-3 text-center">
 
-
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12 justify-content-center align-items-center text-center">
+                        <h5 style="color:rgb(136, 9, 9);font-size:20px">Red Wine</h5>
                     </div>
-                    <div class="col-lg-3 text-center">
+                    <div class="col-lg-12 justify-content-center align-items-center">
+                        <form class="col-lg-12" action="{{ url_for('red_data') }}" method="post">
+                            <p>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rvolacidity" class="form-label text-left">Volatile Acidity 0.12 - 1.58
+                                    </label>
+                                    <span style="color:rgb(136, 9, 9)" id="v"></span>
+                                    <input type="range" class="form-range form-red" min="0.12" max="1.58" step="0.01"
+                                        value="{{rvolacidity}}" name="rvolacidity" id="rvolacidity">
+                                    <script>
+                                        var slidePic = document.getElementById("rvolacidity");
+                                        var v = document.getElementById("v");
+                                        v.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
+                                        slidePic.oninput = function () {
+                                            v.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rTotalSulfur" class="form-label text-left">Total Sulfur 6.0 - 289.0
+                                    </label>
+                                    <span style="color:rgb(136, 9, 9)" id="b"></span>
+                                    <input type="range" class="form-range form-red" min="6.0" max="289.0" step="0.1"
+                                        value="{{rTotalSulfur}}" name="rTotalSulfur" id="rTotalSulfur">
+                                    <script>
+                                        var slidePic = document.getElementById("rTotalSulfur");
+                                        var b = document.getElementById("b");
+                                        b.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            b.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rDensity" class="form-label text-left"> Density 0.990 - 1.003 </label>
+                                    <span style="color:rgb(136, 9, 9)" id="c"></span>
+                                    <input type="range" class="form-range form-red" min="0.990" max="1.003" step="0.001"
+                                        value="{{rDensity}}" name="rDensity" id="rDensity">
+                                    <script>
+                                        var slidePic = document.getElementById("rDensity");
+                                        var c = document.getElementById("c");
+                                        c.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            c.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rSulfates" class="form-label text-left"> Sulfates 0.33 - 2.00 </label>
+                                    <span style="color:rgb(136, 9, 9)" id="a"></span>
+                                    <input type="range" class="form-range form-red" min="0.33" max="2.00" step="0.01"
+                                        value="{{rSulfates}}" name="rSulfates" id="rSulfates">
+                                    <script>
+                                        var slidePic = document.getElementById("rSulfates");
+                                        var a = document.getElementById("a");
+                                        a.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            a.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rAlcohol" class="form-label text-left"> Alcohol 8.4 - 14.9 </label>
+                                    <span style="color:rgb(136, 9, 9)" id="d"></span>
+                                    <input type="range" class="form-range form-red" min="8.4" max="14.9" step="0.1"
+                                        value="{{rAlcohol}}" name="rAlcohol" id="rAlcohol">
+                                    <script>
+                                        var slidePic = document.getElementById("rAlcohol");
+                                        var d = document.getElementById("d");
+                                        d.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            d.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            </p>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Check Quality</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-md-12 text-center outcome">
+                                <span style="color:rgb(136, 9, 9)">
+                                    <br>
+                                    {{routcome}}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col-lg-12 justify-content-center align-items-center text-center">
+                        <h5 style="color:rgb(249, 250, 169);font-size:20px">White Wine</h5>
+                    </div>
+                    <div class="col-lg-12 justify-content-center align-items-center">
+                        <form class="col-lg-12" action="{{ url_for('white_data') }}" method="post">
+                            <p>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wAcidity" class="form-label  text-left"> Volatile Acidity 0.08 - 1.10
+                                    </label>
+                                    <span style="color:rgb(249, 250, 169)" id="e"></span>
+                                    <input type="range" class="form-range form-white" min="0.08" max="1.10" step="0.01"
+                                        value="{{wAcidity}}" name="wAcidity" id="wAcidity">
+                                    <script>
+                                        var slidePic = document.getElementById("wAcidity");
+                                        var e = document.getElementById("e");
+                                        e.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            e.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wFreeSulfur" class="form-label">Free Sulfur Dioxide 2.0 - 289.0 </label>
+                                    <span style="color:rgb(249, 250, 169)" id="f"></span>
+                                    <input type="range" class="form-range form-white" min="2.0" max="289.0" step="1.0"
+                                        value="{{wFreeSulfur}}" name="wFreeSulfur" id="wFreeSulfur">
+                                    <script>
+                                        var slidePic = document.getElementById("wFreeSulfur");
+                                        var f = document.getElementById("f");
+                                        f.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            f.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wDensity" class="form-label"> Density 0.987 - 1.038 </label>
+                                    <span style="color:rgb(249, 250, 169)" id="g"></span>
+                                    <input type="range" class="form-range form-white" min="0.987" max="1.038"
+                                        step="0.001" value="{{wDensity}}" name="wDensity" id="wDensity">
+                                    <script>
+                                        var slidePic = document.getElementById("wDensity");
+                                        var g = document.getElementById("g");
+                                        g.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            g.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wAlcohol" class="form-label"> Alcohol 8.0 - 14.2 </label>
+                                    <span style="color:rgb(249, 250, 169)" id="i"></span>
+                                    <input type="range" class="form-range form-white" min="8.0" max="14.2" step="0.1"
+                                        value="{{wAlcohol}}" name="wAlcohol" id="wAlcohol">
+                                    <script>
+                                        var slidePic = document.getElementById("wAlcohol");
+                                        var i = document.getElementById("i");
+                                        i.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            i.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            </p>
+                            <br>
+                            <br>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Check Quality</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-md-12 text-center outcome">
+                                <span style="color:rgb(249, 250, 169)">
+                                    <br>
+                                    {{woutcome}}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                    <br>
+                    <br>
+                    <h5>World Wines</h5>
+                </div>
+
+
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                    <div class="col-lg-12 text-center">
+
+                        <p>
+                        <h4> Wine Quality Results</h4>
+                        <br>
+                        <br>
+                        </p>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-4 form-group">
+                                    <label for="country">Country of Origin</label>
+                                    <select class="custom-select form-control" id="country">
+                                        <option selected>Select Country</option>
+                                        <option value="1">USA</option>
+                                        <option value="2">Spain</option>
+                                        <option value="3">Italy</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-primary">Check Quality</button>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
 
                     </div>
                 </div>
             </div>
+            <br>
         </div>
-    </div>
-    <br>
-</div>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
 </body>
 
