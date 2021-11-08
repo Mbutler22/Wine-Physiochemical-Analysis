@@ -53,25 +53,24 @@
             <div class="row">
                 <div class="col-lg-12 justify-content-center align-items-center text-center">
                     <br>
-                    <h4><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
-                            aria-controls="collapseDesc">
-                            About Our Model</a></h4>
+                    <h3><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
+                            aria-controls="collapseDesc" class="text-white">
+                            About Our Model</a></h3>
                     <br>
-                    <h5>
+                    <h4>
                         <div class="collapse" id="collapseDesc">
                             <div class="card card-body" style="background-color: rgba(0,0,0,.6);">
-                                Some placeholder content for the collapse component. This panel is hidden by default but
-                                revealed when the user activates the relevant trigger.
+                                Your text about data comes here
                                 <br>
-                                kdkrep'dkrp'
+                                more text 
                                 <br>
-                                lrjktpek
-                                etjk'pwp
+                                more text
+                               
                             </div>
                         </div>
-                    </h5>
+                    </h4>
                     <br>
-                    <h4> Your Wine Properties</h4>
+                    <h3> Your Wine Properties</h3>
 
                 </div>
 
@@ -79,7 +78,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="col-md-12 justify-content-center align-items-center text-center">
-                        <h5 style="color:rgb(136, 9, 9);font-size:20px">Red Wine</h5>
+                        <h5 style="color:rgb(136, 9, 9)">Red Wine</h5>
                     </div>
                     <div class="col-lg-12 justify-content-center align-items-center">
                         <form class="col-lg-12" action="{{ url_for('red_data') }}" method="post">
@@ -179,7 +178,7 @@
                             </p>
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Check Quality</button>
+                                    <button type="submit" class="btn btn-secondary btn-lg">Check Quality</button>
                                 </div>
                             </div>
                         </form>
@@ -197,7 +196,7 @@
 
                 <div class="col-md-6">
                     <div class="col-lg-12 justify-content-center align-items-center text-center">
-                        <h5 style="color:rgb(249, 250, 169);font-size:20px">White Wine</h5>
+                        <h5 style="color:rgb(249, 250, 169)">White Wine</h5>
                     </div>
                     <div class="col-lg-12 justify-content-center align-items-center">
                         <form class="col-lg-12" action="{{ url_for('white_data') }}" method="post">
@@ -281,7 +280,7 @@
                             <br>
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Check Quality</button>
+                                    <button type="submit" class="btn btn-secondary btn-lg">Check Quality</button>
                                 </div>
                             </div>
                         </form>
@@ -305,30 +304,83 @@
             <br>
             <br>
             <div class="row">
-                <div class="col-lg-12 justify-content-center align-items-center text-center">
-                    <br>
-                    <br>
-                    <h5>World Wines</h5>
-                </div>
-
 
                 <div class="col-lg-12 justify-content-center align-items-center text-center">
                     <div class="col-lg-12 text-center">
 
                         <p>
-                        <h4> Wine Quality Results</h4>
+                        <h3> World Wines </h3>
                         <br>
                         <br>
                         </p>
-                        <form>
+                        <form class="col-lg-12" action="{{ url_for('world_data') }}" method="post">
                             <div class="row">
                                 <div class="col-sm-4 form-group">
                                     <label for="country">Country of Origin</label>
-                                    <select class="custom-select form-control" id="country">
-                                        <option selected>Select Country</option>
-                                        <option value="1">USA</option>
-                                        <option value="2">Spain</option>
-                                        <option value="3">Italy</option>
+                                    <select class="custom-select form-control" id="country" name="country">
+                                        <!-- <option selected>Select Country</option> -->
+                                        <option value="1">Argentina</option>
+                                        <option value="2">Australia</option>
+                                        <option value="3">Canada</option>
+                                        <option value="4">France</option>
+                                        <option value="5">Italy</option>
+                                        <option value="6">Spain</option>
+                                        <option value="7">US</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 form-group">
+                                    <label for="price">Price (in $)</label>
+                                    <select class="custom-select form-control" id="price" name="price">
+                                        <!-- <option selected>Select Price</option> -->
+                                        <option value="1">4.00 - 14.99</option>
+                                        <option value="2">15.00 - 18.99</option>
+                                        <option value="3">19.00 - 23.99</option>
+                                        <option value="4">24.00 - 28.99</option>
+                                        <option value="5">29.00 - 35.99</option>
+                                        <option value="6">36.00 - 45.99</option>
+                                        <option value="7">46.00 - 63.99</option>
+                                        <option value="8">more than 64.00</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 form-group">
+                                    <label for="variety">Variety</label>
+                                    <select class="custom-select form-control" id="variety" name="variety">
+                                        <!-- <option selected>Select Variety</option> -->
+                                        <option value="1">Barbera</option>
+                                        <option value="2">Bordeaux-style Red Blend</option>
+                                        <option value="3">Bordeaux-style White Blend</option>
+                                        <option value="4">Cabernet Franc</option>
+                                        <option value="5">Cabernet Sauvignon</option>
+                                        <option value="6">Champagne Blend</option>
+                                        <option value="7">Chardonnay</option>
+                                        <option value="8">Gamay</option>
+                                        <option value="9">Gewürztraminer</option>
+                                        <option value="10">Glera</option>
+                                        <option value="11">Grenache</option>
+                                        <option value="12">Malbec</option>
+                                        <option value="13">Merlot</option>
+                                        <option value="14">Nebbiolo</option>
+                                        <option value="15">Petite Sirah</option>
+                                        <option value="16">Pinot Grigio</option>
+                                        <option value="17">Pinot Gris</option>
+                                        <option value="18">Pinot Noir</option>
+                                        <option value="19">Red Blend</option>
+                                        <option value="20">Rhône-style Red Blend</option>
+                                        <option value="21">Riesling</option>
+                                        <option value="22">Rosé</option>
+                                        <option value="23">Sangiovese</option>
+                                        <option value="24">Sangiovese Grosso</option>
+                                        <option value="25">Sauvignon Blanc</option>
+                                        <option value="26">Shiraz</option>
+                                        <option value="27">Sparkling Blend</option>
+                                        <option value="28">Syrah</option>
+                                        <option value="29">Tempranillo</option>
+                                        <option value="30">Tempranillo Blend</option>
+                                        <option value="31">Viognier</option>
+                                        <option value="32">White Blend</option>
+                                        <option value="33">Zinfandel</option>
                                     </select>
                                 </div>
                             </div>
@@ -336,12 +388,20 @@
                             <br>
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-lg-12">
-                                    <button type="submit" class="btn btn-primary">Check Quality</button>
+                                    <button type="submit" class="btn btn-secondary btn-lg">Check Quality</button>
                                 </div>
                             </div>
                         </form>
                         <br>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-md-12 text-center outcome">
+                                <span style="color:rgba(236, 183, 104, 0.965)">
+                                    <br>
+                                    {{gwine.outcome}}
+                                </span>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -351,7 +411,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
-
+    </div>    
 </body>
 
 </html>
