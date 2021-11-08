@@ -20,16 +20,20 @@ h1 {
     text-align: center;
   } 
 
-  h4 {
+  h3 {
     font-family: 'Rock Salt', cursive;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
   } 
-
+  h4 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    font-weight: bold;  
+  }
 
   h5 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 25px;
     font-weight: bold; 
   }
   
@@ -65,5 +69,32 @@ html {
     border-radius: 2px;
     height: 10px;
   }
-  
 
+  .form-red::-webkit-slider-thumb {
+    background: rgb(110, 5, 5);
+  }
+  
+  .form-red::-moz-range-thumb {
+    background: rgb(110, 5, 5);
+  }
+  
+  .form-red::-ms-thumb {
+    background: rgb(110, 5, 5);
+  }
+ 
+  .form-white::-webkit-slider-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-moz-range-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-ms-thumb {
+    background: rgb(249, 250, 169);
+  }
+  .outcome {
+    font-family: "Sofia", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+  }

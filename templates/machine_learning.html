@@ -1,153 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Quality Wine Builder</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" type="text/css" href="../static/css/ML.css">
+
 </head>
-<body stype = "overflow: hidden">
+
+<body stype="overflow: hidden">
     <nav class="navbar navbar-expand-lg navbar-light bg-light mask gradient-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
                 Quality Wine Builder
             </a>
             <!-- <div class="d-flex"> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/visualizations.html">About Data & Visualizations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/machine_learning.html">Machine Learning Model</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/team.html">Team</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visualizations.html">About Data & Visualizations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/machine_learning.html">Machine Learning Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/team.html">Team</a>
+                    </li>
+                </ul>
+            </div>
             <!-- </div> -->
         </div>
 
-       
+
     </nav>
 
+    <div class="row">
+        <div class="col-md-2"></div>
 
-    <div class ="container-fluid fixed-right" style= "background-color: rgba(0,0,0,.6);overflow:scroll; margin-top: 50px; width: 1300px; height: 700px; margin-left: 440px; border:1px solid #cecece">
-        <div class="row">
-            <div class="col-lg-12 justify-content-center align-items-center text-center">      
-                <br>
-                <h4>About Our Model</h4>
-                <br> 
-                <h5>will input summary about the data source</h5>
-                <br>
-                <h4> Your Wine Properties</h4>
+        <div class="container-fluid col-md-8"
+            style="background-color: rgba(0,0,0,.6);overflow:scroll;  height: 90vh; margin-top: 20px; margin-bottom: 20px; border:1px solid #cecece">
+            <!-- style="background-color: rgba(0,0,0,.6);overflow:scroll;  margin-top: 50px; width: 1300px; height: 700px; margin-left: 440px; border:1px solid #cecece"> -->
+            <div class="row">
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                    <br>
+                    <h3><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
+                            aria-controls="collapseDesc" class="text-white">
+                            About Our Model</a></h3>
+                    <br>
+                    <h4>
+                        <div class="collapse" id="collapseDesc">
+                            <div class="card card-body" style="background-color: rgba(0,0,0,.6);">
+                                Your text about data comes here
+                                <br>
+                                more text 
+                                <br>
+                                more text
+                               
+                            </div>
+                        </div>
+                    </h4>
+                    <br>
+                    <h3> Your Wine Properties</h3>
+
+                </div>
+
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12 justify-content-center align-items-center text-center">
+                        <h5 style="color:rgb(136, 9, 9)">Red Wine</h5>
+                    </div>
+                    <div class="col-lg-12 justify-content-center align-items-center">
+                        <form class="col-lg-12" action="{{ url_for('red_data') }}" method="post">
+                            <p>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rvolacidity" class="form-label text-left">Volatile Acidity 0.12 - 1.58
+                                    </label>
+                                    <span style="color:rgb(136, 9, 9)" id="v"></span>
+                                    <input type="range" class="form-range form-red" min="0.12" max="1.58" step="0.01"
+                                        value="{{rvolacidity}}" name="rvolacidity" id="rvolacidity">
+                                    <script>
+                                        var slidePic = document.getElementById("rvolacidity");
+                                        var v = document.getElementById("v");
+                                        v.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
 
+                                        slidePic.oninput = function () {
+                                            v.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rTotalSulfur" class="form-label text-left">Total Sulfur 6.0 - 289.0
+                                    </label>
+                                    <span style="color:rgb(136, 9, 9)" id="b"></span>
+                                    <input type="range" class="form-range form-red" min="6.0" max="289.0" step="0.1"
+                                        value="{{rTotalSulfur}}" name="rTotalSulfur" id="rTotalSulfur">
+                                    <script>
+                                        var slidePic = document.getElementById("rTotalSulfur");
+                                        var b = document.getElementById("b");
+                                        b.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            b.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rDensity" class="form-label text-left"> Density 0.990 - 1.003 </label>
+                                    <span style="color:rgb(136, 9, 9)" id="c"></span>
+                                    <input type="range" class="form-range form-red" min="0.990" max="1.003" step="0.001"
+                                        value="{{rDensity}}" name="rDensity" id="rDensity">
+                                    <script>
+                                        var slidePic = document.getElementById("rDensity");
+                                        var c = document.getElementById("c");
+                                        c.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            c.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rSulfates" class="form-label text-left"> Sulfates 0.33 - 2.00 </label>
+                                    <span style="color:rgb(136, 9, 9)" id="a"></span>
+                                    <input type="range" class="form-range form-red" min="0.33" max="2.00" step="0.01"
+                                        value="{{rSulfates}}" name="rSulfates" id="rSulfates">
+                                    <script>
+                                        var slidePic = document.getElementById("rSulfates");
+                                        var a = document.getElementById("a");
+                                        a.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            a.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="rAlcohol" class="form-label text-left"> Alcohol 8.4 - 14.9 </label>
+                                    <span style="color:rgb(136, 9, 9)" id="d"></span>
+                                    <input type="range" class="form-range form-red" min="8.4" max="14.9" step="0.1"
+                                        value="{{rAlcohol}}" name="rAlcohol" id="rAlcohol">
+                                    <script>
+                                        var slidePic = document.getElementById("rAlcohol");
+                                        var d = document.getElementById("d");
+                                        d.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            d.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            </p>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-secondary btn-lg">Check Quality</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-md-12 text-center outcome">
+                                <span style="color:rgb(136, 9, 9)">
+                                    <br>
+                                    {{routcome}}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col-lg-12 justify-content-center align-items-center text-center">
+                        <h5 style="color:rgb(249, 250, 169)">White Wine</h5>
+                    </div>
+                    <div class="col-lg-12 justify-content-center align-items-center">
+                        <form class="col-lg-12" action="{{ url_for('white_data') }}" method="post">
+                            <p>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wAcidity" class="form-label  text-left"> Volatile Acidity 0.08 - 1.10
+                                    </label>
+                                    <span style="color:rgb(249, 250, 169)" id="e"></span>
+                                    <input type="range" class="form-range form-white" min="0.08" max="1.10" step="0.01"
+                                        value="{{wAcidity}}" name="wAcidity" id="wAcidity">
+                                    <script>
+                                        var slidePic = document.getElementById("wAcidity");
+                                        var e = document.getElementById("e");
+                                        e.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            e.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wFreeSulfur" class="form-label">Free Sulfur Dioxide 2.0 - 289.0 </label>
+                                    <span style="color:rgb(249, 250, 169)" id="f"></span>
+                                    <input type="range" class="form-range form-white" min="2.0" max="289.0" step="1.0"
+                                        value="{{wFreeSulfur}}" name="wFreeSulfur" id="wFreeSulfur">
+                                    <script>
+                                        var slidePic = document.getElementById("wFreeSulfur");
+                                        var f = document.getElementById("f");
+                                        f.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            f.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wDensity" class="form-label"> Density 0.987 - 1.038 </label>
+                                    <span style="color:rgb(249, 250, 169)" id="g"></span>
+                                    <input type="range" class="form-range form-white" min="0.987" max="1.038"
+                                        step="0.001" value="{{wDensity}}" name="wDensity" id="wDensity">
+                                    <script>
+                                        var slidePic = document.getElementById("wDensity");
+                                        var g = document.getElementById("g");
+                                        g.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            g.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label for="wAlcohol" class="form-label"> Alcohol 8.0 - 14.2 </label>
+                                    <span style="color:rgb(249, 250, 169)" id="i"></span>
+                                    <input type="range" class="form-range form-white" min="8.0" max="14.2" step="0.1"
+                                        value="{{wAlcohol}}" name="wAlcohol" id="wAlcohol">
+                                    <script>
+                                        var slidePic = document.getElementById("wAlcohol");
+                                        var i = document.getElementById("i");
+                                        i.innerHTML = '&nbsp;&nbsp;[' + slidePic.value + ']';
+
+                                        slidePic.oninput = function () {
+                                            i.innerHTML = '&nbsp;&nbsp;[' + this.value + ']';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            </p>
+                            <br>
+                            <br>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-secondary btn-lg">Check Quality</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-md-12 text-center outcome">
+                                <span style="color:rgb(249, 250, 169)">
+                                    <br>
+                                    {{woutcome}}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                    <div class="col-lg-12 text-center">
+
+                        <p>
+                        <h3> World Wines </h3>
+                        <br>
+                        <br>
+                        </p>
+                        <form class="col-lg-12" action="{{ url_for('world_data') }}" method="post">
+                            <div class="row">
+                                <div class="col-sm-4 form-group">
+                                    <label for="country">Country of Origin</label>
+                                    <select class="custom-select form-control" id="country" name="country">
+                                        <!-- <option selected>Select Country</option> -->
+                                        <option value="1">Argentina</option>
+                                        <option value="2">Australia</option>
+                                        <option value="3">Canada</option>
+                                        <option value="4">France</option>
+                                        <option value="5">Italy</option>
+                                        <option value="6">Spain</option>
+                                        <option value="7">US</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 form-group">
+                                    <label for="price">Price (in $)</label>
+                                    <select class="custom-select form-control" id="price" name="price">
+                                        <!-- <option selected>Select Price</option> -->
+                                        <option value="1">4.00 - 14.99</option>
+                                        <option value="2">15.00 - 18.99</option>
+                                        <option value="3">19.00 - 23.99</option>
+                                        <option value="4">24.00 - 28.99</option>
+                                        <option value="5">29.00 - 35.99</option>
+                                        <option value="6">36.00 - 45.99</option>
+                                        <option value="7">46.00 - 63.99</option>
+                                        <option value="8">more than 64.00</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 form-group">
+                                    <label for="variety">Variety</label>
+                                    <select class="custom-select form-control" id="variety" name="variety">
+                                        <!-- <option selected>Select Variety</option> -->
+                                        <option value="1">Barbera</option>
+                                        <option value="2">Bordeaux-style Red Blend</option>
+                                        <option value="3">Bordeaux-style White Blend</option>
+                                        <option value="4">Cabernet Franc</option>
+                                        <option value="5">Cabernet Sauvignon</option>
+                                        <option value="6">Champagne Blend</option>
+                                        <option value="7">Chardonnay</option>
+                                        <option value="8">Gamay</option>
+                                        <option value="9">Gewürztraminer</option>
+                                        <option value="10">Glera</option>
+                                        <option value="11">Grenache</option>
+                                        <option value="12">Malbec</option>
+                                        <option value="13">Merlot</option>
+                                        <option value="14">Nebbiolo</option>
+                                        <option value="15">Petite Sirah</option>
+                                        <option value="16">Pinot Grigio</option>
+                                        <option value="17">Pinot Gris</option>
+                                        <option value="18">Pinot Noir</option>
+                                        <option value="19">Red Blend</option>
+                                        <option value="20">Rhône-style Red Blend</option>
+                                        <option value="21">Riesling</option>
+                                        <option value="22">Rosé</option>
+                                        <option value="23">Sangiovese</option>
+                                        <option value="24">Sangiovese Grosso</option>
+                                        <option value="25">Sauvignon Blanc</option>
+                                        <option value="26">Shiraz</option>
+                                        <option value="27">Sparkling Blend</option>
+                                        <option value="28">Syrah</option>
+                                        <option value="29">Tempranillo</option>
+                                        <option value="30">Tempranillo Blend</option>
+                                        <option value="31">Viognier</option>
+                                        <option value="32">White Blend</option>
+                                        <option value="33">Zinfandel</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-secondary btn-lg">Check Quality</button>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="row justify-content-center align-items-center text-center">
+                            <div class="col-md-12 text-center outcome">
+                                <span style="color:rgba(236, 183, 104, 0.965)">
+                                    <br>
+                                    {{gwine.outcome}}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
         </div>
-        <div class="row">
-            <div class="col-lg-12 justify-content-center align-items-center text-center">      
-       
-                <h5>Property 1</h5>
-               
-            </div>
-
-       
-       <div class="col-lg-12 justify-content-center align-items-center text-center">
-        <div class="col-lg-12 text-center">      
-        
-               <p>
-                <br>  
-                <!--div id="plot"></div-->
-                <br>
-                <br></p> 
-
-        </div>
-
-        <div class="row justify-content-center align-items-center text-center">
-            <div class="col-lg-3 text-center">      
-            
-               
-            </div> 
-            <div class="col-lg-3 text-center">      
-            
-                
-                
-        </div> 
-       
-     
-
-        <div class="row">
-            <div class="col-lg-12 justify-content-center align-items-center text-center">      
-                <br>
-                <br>
-                <h5>Property 2</h5>
-               
-            </div>
-
-       
-       <div class="col-lg-12 justify-content-center align-items-center text-center">
-        <div class="col-lg-12 text-center">      
-        
-               <p>
-                <br>  
-                <!--div id="pie"></div-->
-                <br>
-                <br></p> 
-
-        </div>
-
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-3 text-center">      
-            
-               
-            </div> 
-            <div class="col-lg-3 text-center">      
-            
-                
-            </div>
-
-            
-        <div class="row">
-            <div class="col-lg-12 justify-content-center align-items-center text-center">      
-                <br>
-                <br>
-                <h5>Property 3</h5>
-               
-            </div>
-
-       
-       <div class="col-lg-12 justify-content-center align-items-center text-center">
-        <div class="col-lg-12 text-center">      
-        
-               <p>
-                <br>  
-                <h4> Wine Quality Results</h4>
-                <br>
-                <br></p> 
-
-        </div>
-
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-3 text-center">      
-            
-               
-            </div> 
-            <div class="col-lg-3 text-center">      
-            
-               
-            </div>
-    </div>
-
-  
-       
-      
-
-
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    </div>    
 </body>
+
 </html>
