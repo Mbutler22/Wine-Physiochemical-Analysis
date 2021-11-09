@@ -22,19 +22,7 @@ class WWines:
         print(self.variety)
 
 
-routcome = ""
-rvolacidity = 0.12
-rTotalSulfur = 6.0
-rDensity = 0.990
-rSulfates = 0.33
-rAlcohol = 8.4
-woutcome =""
-wAcidity = 0.08
-wFreeSulfur = 2.00
-wDensity = 0.987
-wAlcohol = 8.0
 
-gwine = WWines()
 
 @app.route("/")
 @app.route("/index.html")
@@ -131,10 +119,38 @@ def world_data():
         gwine.outcome="Good Choice!"
     return redirect("/machine_learning.html")    
 
+
+@app.route("/reset.html")
+def reset():
+    resetValues()
+    return redirect("/machine_learning.html")  
+
+def resetValues():
+    global rvolacidity, rTotalSulfur, rDensity, rSulfates, rAlcohol
+    global wAcidity, wFreeSulfur, wDensity, wAlcohol
+    global gwine 
+    global routcome, woutcome 
+    
+    routcome = ""
+    rvolacidity = 0.12
+    rTotalSulfur = 6.0
+    rDensity = 0.990
+    rSulfates = 0.33
+    rAlcohol = 8.4
+    woutcome =""
+    wAcidity = 0.08
+    wFreeSulfur = 2.00
+    wDensity = 0.987
+    wAlcohol = 8.0
+
+    gwine = WWines()
+
+
 @app.route("/team.html")
 def team():
     return render_template("team.html")
 
+resetValues()
 
 if __name__ == "__main__":
     app.run(debug=True)
