@@ -53,19 +53,38 @@
             <div class="row">
                 <div class="col-lg-12 justify-content-center align-items-center text-center">
                     <br>
-                    <h3><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
-                            aria-controls="collapseDesc" class="text-white">
-                            About Our Model</a></h3>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <h3><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
+                                    aria-controls="collapseDesc" class="text-white">
+                                    About Our Model</a></h3>
+                        </div>
+                        <div class="col-sm-4 justify-content-right align-items-right text-right"><a href="/reset.html">Reset Values</a></div>
+                    </div>
                     <br>
                     <h4>
                         <div class="collapse" id="collapseDesc">
-                            <div class="card card-body" style="background-color: rgba(0,0,0,.6);">
-                                Your text about data comes here
+                            <div class="card card-body" style="background-color: rgba(0,0,0,.6); text-align: left">
+                                There are two datasets related to the red and white variants used in two separate models. The model are set to predict the quality rating that closely matches the
+                                actual rating. Our models need to set the values before you click the Check Quality button.                                
                                 <br>
-                                more text 
+                                How to set the values:
+                                <h6>Volatile Acidity:</h6> are high acetic acid in wine which leads to an unpleasant vinegar taste.
+                                Higher levels indicating wine spoilage.
                                 <br>
-                                more text
-                               
+                                <h6>Total Sulfur Dioxide (SO2):</h6> is the amount of free & bound forms of SO2. Legal limit in US is 350 mg/l. SO2 is required to make high-quality wines that can stand the test of time.
+                                Sweeter wines usally get a little bit more for extra protection. 
+                                <br>
+                                <h6>Free Sulfur Dioxide (SO2):</h6> it prevents microbial growth and the oxidation of wine. SO2
+                                that is present in wine but has not yet reacted is considered “free.” Free SO2 content is usually around 25 mg/L at bottling time for the whites and 30 mg/L for the reds. 
+                                <br>
+                                <h6>Density:</h6> sweeter wines have a higher density.The density of wine is primarily determined
+                                by the concentration of alcohol, sugar, glycerol, and other dissolved solids.
+                                <br>
+                                <h6>Sulphates:</h6> they are there by natural processes, type of mineral salt. 
+                                <br>
+                                <h6>Alcohol:</h6> the amount of alcohol in wine
                             </div>
                         </div>
                     </h4>
@@ -301,8 +320,6 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
             <div class="row">
 
                 <div class="col-lg-12 justify-content-center align-items-center text-center">
@@ -314,9 +331,11 @@
                         <br>
                         </p>
                         <form class="col-lg-12" action="{{ url_for('world_data') }}" method="post">
-                            <div class="row">
+                            <div class="row text-left">
                                 <div class="col-sm-4 form-group">
-                                    <label for="country">Country of Origin</label>
+                                    <label for="country">
+                                        <h4> Country of Origin </h4>
+                                    </label>
                                     <select class="custom-select form-control" id="country" name="country">
                                         <!-- <option selected>Select Country</option> -->
                                         <option value="1">Argentina</option>
@@ -330,7 +349,9 @@
                                 </div>
 
                                 <div class="col-sm-4 form-group">
-                                    <label for="price">Price (in $)</label>
+                                    <label for="price">
+                                        <h4>Price (in $)</h4>
+                                    </label>
                                     <select class="custom-select form-control" id="price" name="price">
                                         <!-- <option selected>Select Price</option> -->
                                         <option value="1">4.00 - 14.99</option>
@@ -345,7 +366,9 @@
                                 </div>
 
                                 <div class="col-sm-4 form-group">
-                                    <label for="variety">Variety</label>
+                                    <label for="variety">
+                                        <h4>Variety</h4>
+                                    </label>
                                     <select class="custom-select form-control" id="variety" name="variety">
                                         <!-- <option selected>Select Variety</option> -->
                                         <option value="1">Barbera</option>
@@ -392,7 +415,6 @@
                                 </div>
                             </div>
                         </form>
-                        <br>
                         <div class="row justify-content-center align-items-center text-center">
                             <div class="col-md-12 text-center outcome">
                                 <span style="color:rgba(236, 183, 104, 0.965)">
@@ -411,7 +433,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
-    </div>    
+    </div>
 </body>
 
 </html>
