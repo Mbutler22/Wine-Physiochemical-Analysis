@@ -41,7 +41,7 @@ RandomForestClassifier, Deep Neural to train models and evaluate
 models using testing data to choose the model with highest 
 performance score 
 4. Melissa/Dasa/Joshua - HTML/CSS : build up webpage with user data selection based on our features 
-5. Shuchi/Megan - Tableau: – visualization :( Red Wine Visualization - Shuchi)
+5. Shuchi/Megan - Tableau: – visualization :( Red Wine Visualization - Shuchi, White Wine Visualizations - Megan)
 6. Dasa/Joshua/Melissa - Flask
 7. Megan - Heroku 
 
