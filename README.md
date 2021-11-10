@@ -32,30 +32,19 @@ be able to predict quality of wine.
 
 
 ## Project Outline
-<<<<<<< HEAD
-1. Melissa - ETL: Extract Data from : csv files, json
-2. Dasa/Tinu/Joshua - Use Pandas Jupyter Notebook for data preprocessing and selection of the features for input to machine learning models
-3. Dasa/Tinu/Joshua - Machine Learning : we plan to use LinearRegression, RandomForestClassifier, SVM, KNN (plus unsupervised models) to train models and evaluate models using testing data to choose the model with highest performance score 
-4. Melissa/Shuchi/Joshua - HTML/CSS : build up interactive webpage  
-5. Shuchi/Megan - Tableau visualizations:
-     * Relation between alcohol percentage and quality
-     * Correlation between various factors
-     * Relation between quality of wine as on fixed acidity
-7. Joshua - Flask
-8. Megan - Heroku 
-=======
+
 1. Shuchi - ETL: Extract Data from : csv files, json
 2. Dasa/Tinu/Joshua - Use Pandas Jupyter Notebook for data preprocessing and selection of 
 the features for input to machine learning models
-3. Dasa/Tinu/Joshua - Machine Learning : we plan to use LinearRegression, 
+3. Dasa/Joshua/Tinuola - Machine Learning : we plan to use LinearRegression, 
 RandomForestClassifier, Deep Neural to train models and evaluate 
 models using testing data to choose the model with highest 
 performance score 
-4. Melissa/Shuchi/Joshua - HTML/CSS : build up webpage with user data selection based on our features 
+4. Melissa/Dasa/Joshua - HTML/CSS : build up webpage with user data selection based on our features 
 5. Shuchi/Megan - Tableau: – visualization 
-6. Joshua - Flask
+6. Dasa/Joshua/Melissa - Flask
 7. Megan - Heroku 
->>>>>>> shuchi
+
 
 ## Team Members
 * Melissa Diep
