@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quality Wine Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/visualizations.css">
+</head>
+
+<body stype="overflow: hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mask gradient-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                Quality Wine Builder
+            </a>
+            <!-- <div class="d-flex"> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visualizations.html">About Data & Visualizations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/machine_learning.html">Machine Learning Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/team.html">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
+
+
+    </nav>
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="container-fluid col-md-8"
+            style="background-color: rgba(0,0,0,.6);overflow:scroll;  height: 90vh; margin-top: 20px; margin-bottom: 20px; border:1px solid #cecece">
+            <!-- style= "background-color: rgba(0,0,0,.6);overflow:scroll; margin-top: 50px; width: 1300px; height: 700px; margin-left: 440px; border:1px solid #cecece"> -->
+            <div class="row">
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                    <br>
+                    <h3><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
+                            aria-controls="collapseDesc" class="text-white">
+                            About Our Data</a></h3>
+                    <br>
+                    <h4>
+                        <div class="collapse" id="collapseDesc">
+                            <div class="card card-body" style="background-color: rgba(0,0,0,.6);">
+                                Your text about data comes here
+                                <br>
+                                more text
+                                <br>
+                                more text
+
+                            </div>
+                        </div>
+                    </h4>
+                    <h4>Tableau Visualizations</h4>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12 justify-content-center align-items-center text-center">
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-8">
+                            <h5> White Wine Quality Exploration </h5>
+                        
+                            <!--YOUR LINK OVER HERE  -->
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 justify-content-center align-items-center text-center">
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-8">
+                            <h5> Red Wine Quality Exploration </h5>
+                             <div class='tableauPlaceholder' id='viz1636414434894' style='position: relative'>
+                                <noscript>
+                                    <a href='#'>
+                                        <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;WineAnalysis_16358576862840&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+                                </noscript>
+                                    <object class='tableauViz'  style='display:none;'>
+                                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                                        <param name='name' value='WineAnalysis_16358576862840&#47;Dashboard1' />
+                                        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;WineAnalysis_16358576862840&#47;Dashboard1&#47;1.png' /> 
+                                        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+                                        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+                                        <param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+                                    </object>
+                                </div>                
+                                <script type='text/javascript'>                   
+                                 var divElement = document.getElementById('viz1636414434894');                  
+                                 var vizElement = divElement.getElementsByTagName('object')[0];                   
+                                 if ( divElement.offsetWidth > 800 ) { 
+                                     vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';
+                                     vizElement.style.width='100%';vizElement.style.minHeight='587px';
+                                     vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                                } 
+                                 else if ( divElement.offsetWidth > 500 ) { 
+                                     vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';
+                                     vizElement.style.width='100%';vizElement.style.minHeight='587px';
+                                     vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                                } 
+                                 else { 
+                                     vizElement.style.width='100%';vizElement.style.height='1027px';
+                                }                     
+                                  var scriptElement = document.createElement('script');                   
+                                  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+                                  vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                </script>  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+
+                    <div class="row">
+                        <div class="col-lg-12 justify-content-center align-items-center text-center">
+                            <br>
+                            <br>
+                            <h5>Chart 3</h5>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
