@@ -46,6 +46,10 @@ performance score
 7. Megan - Heroku 
 
 
+## Heroku Website Deploymwent
+
+https://wine-quality-testing.herokuapp.com/index.html
+
 ## Team Members
 * Melissa Diep
 * Shuchi Khandelwal
