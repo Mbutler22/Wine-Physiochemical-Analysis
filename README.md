@@ -46,7 +46,7 @@ performance score
 7. Megan - Heroku 
 
 
-## Heroku Website Deploymwent
+## Heroku Website Deployment
 
 https://wine-quality-testing.herokuapp.com/index.html
 
