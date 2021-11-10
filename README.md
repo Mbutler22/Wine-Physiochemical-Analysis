@@ -48,7 +48,7 @@ performance score
 
 ## Heroku Website Deployment
 
-https://wine-quality-testing.herokuapp.com/index.html
+https://wine-quality-testing.herokuapp.com
 
 ## Team Members
 * Melissa Diep
