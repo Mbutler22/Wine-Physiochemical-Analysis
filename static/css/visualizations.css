@@ -19,6 +19,14 @@ h1 {
     border-radius: 0;
     text-align: center;
   } 
+
+ 
+  h2 {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 20px;
+  /* font-weight: bold;   */
+  }
+
   h3 {
     font-family: 'Rock Salt', cursive;
     font-size: 35px;
@@ -38,6 +46,13 @@ h1 {
     text-align: left;
   }
   
+  h6 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 25px;
+    font-weight: bold; 
+    color:darkred;
+  }
+
 a.navbar-brand {
     font-family: 'Rock Salt', cursive;
     }
@@ -70,5 +85,5 @@ html {
     border-radius: 2px;
     height: 10px;
   }
-  
+
 
