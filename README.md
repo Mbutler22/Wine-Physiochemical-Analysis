@@ -15,7 +15,7 @@ In addition, we tried to build a model for prediction of the quality based on th
 
 We decided to use Tableau for further exploration of those datasets. All twelve variables in two datasets were considered for correlation analysis and visualization to identify features which correlate the most with the quality. 
 
-Then, we deployed a website onto Heroku and enhanced the user experience with bootstrap and CSS styling.
+Then, we utilized HTML with bootstrap and CSS styling and flask capabilities to deploy a website onto Heroku
 
 ## Heroku Website Deployment
 
@@ -139,8 +139,6 @@ We wanted to tackle the data about world wines from Kaggle and try to build a mo
 
 The dataset originally contains information on 129,971 wines. After the ETL process, we keep data about 84,881 wines, with selected columns for the country, price, and variety as input variables and points as an output variable. Points were in the range from 80 to 100, and there were transformed to binary classification, with 0 values for the range below 85.7 and 1 and good quality for the range from 85.7 to 100 (based on the distribution of the data). For the price information was necessary to use bins (the price range was from $4.00 - $3,300.00), as for the final input for the machine learning model. Data about 33 wine varieties from 7 countries are used for the model to predict the quality in the RandomForest Classifier Model, which works with 73% accuracy to predict the quality of the wine.
  
-
-
 
 
 ## Team Members
