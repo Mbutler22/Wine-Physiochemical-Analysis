@@ -9,7 +9,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" type="text/css" href="../static/css/ML.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/ML_v4.css">
 
 </head>
 
@@ -60,7 +60,8 @@
                                     aria-controls="collapseDesc" class="text-white">
                                     About Our Model</a></h3>
                         </div>
-                        <div class="col-sm-4 justify-content-right align-items-right text-right"><a href="/reset.html">Reset Values</a></div>
+                        <div class="col-sm-4 justify-content-right align-items-right text-right text-white"><button href="/reset.html" class="btn btn-secondary btn-md"><a href="/reset.html">Reset Values</a></button></div>
+                        
                     </div>
                     <br>
                     <h4>
@@ -98,7 +99,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="col-md-12 justify-content-center align-items-center text-center">
-                        <h5 style="color:rgb(207, 10, 10)">Red Wine</h5>
+
+                        <h5 style="color:rgb(214, 112, 112)">Red Wine</h5>
+
                     </div>
                     <div class="col-lg-12 justify-content-center align-items-center">
                         <form class="col-lg-12" action="{{ url_for('red_data') }}" method="post">
@@ -108,7 +111,10 @@
                                 <div class="col-md-8">
                                     <label for="rvolacidity" class="form-label text-left">Volatile Acidity 0.12 - 1.58
                                     </label>
-                                    <span style="color:rgb(207, 10, 10)" id="v"></span>
+
+                                    <span style="color:rgb(214, 112, 112)" id="v"></span>
+
+
                                     <input type="range" class="form-range form-red" min="0.12" max="1.58" step="0.01"
                                         value="{{rvolacidity}}" name="rvolacidity" id="rvolacidity">
                                     <script>
@@ -127,7 +133,9 @@
                                 <div class="col-md-8">
                                     <label for="rTotalSulfur" class="form-label text-left">Total Sulfur 6.0 - 289.0
                                     </label>
-                                    <span style="color:rgb(207, 10, 10)" id="b"></span>
+
+                                    <span style="color:rgb(214, 112, 112)" id="b"></span>
+
                                     <input type="range" class="form-range form-red" min="6.0" max="289.0" step="0.1"
                                         value="{{rTotalSulfur}}" name="rTotalSulfur" id="rTotalSulfur">
                                     <script>
@@ -145,7 +153,9 @@
                                 <div class="col-md-2"></div>
                                 <div class="col-md-8">
                                     <label for="rDensity" class="form-label text-left"> Density 0.990 - 1.003 </label>
-                                    <span style="color:rgb(207, 10, 10)" id="c"></span>
+
+                                    <span style="color:rgb(214, 112, 112)" id="c"></span>
+
                                     <input type="range" class="form-range form-red" min="0.990" max="1.003" step="0.001"
                                         value="{{rDensity}}" name="rDensity" id="rDensity">
                                     <script>
@@ -163,7 +173,9 @@
                                 <div class="col-md-2"></div>
                                 <div class="col-md-8">
                                     <label for="rSulfates" class="form-label text-left"> Sulfates 0.33 - 2.00 </label>
-                                    <span style="color:rgb(207, 10, 10)" id="a"></span>
+
+                                    <span style="color:rgb(214, 112, 112)" id="a"></span>
+
                                     <input type="range" class="form-range form-red" min="0.33" max="2.00" step="0.01"
                                         value="{{rSulfates}}" name="rSulfates" id="rSulfates">
                                     <script>
@@ -181,7 +193,9 @@
                                 <div class="col-md-2"></div>
                                 <div class="col-md-8">
                                     <label for="rAlcohol" class="form-label text-left"> Alcohol 8.4 - 14.9 </label>
-                                    <span style="color:rgb(207, 10, 10)" id="d"></span>
+
+                                    <span style="color:rgb(214, 112, 112)" id="d"></span>
+
                                     <input type="range" class="form-range form-red" min="8.4" max="14.9" step="0.1"
                                         value="{{rAlcohol}}" name="rAlcohol" id="rAlcohol">
                                     <script>
@@ -204,7 +218,9 @@
                         </form>
                         <div class="row justify-content-center align-items-center text-center">
                             <div class="col-md-12 text-center outcome">
-                                <span style="color:rgb(207, 10, 10)">
+
+                                <span style="color:rgb(214, 112, 112)">
+
                                     <br>
                                     {{routcome}}
                                 </span>

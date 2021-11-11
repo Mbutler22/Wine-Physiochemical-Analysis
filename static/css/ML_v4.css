@@ -1,0 +1,107 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("../img/ML_background.jpg");
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+h1 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+    border: 3px solid;
+    border-radius: 0;
+    text-align: center;
+  } 
+
+  h3 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 28px;
+    text-align: center;
+  } 
+  h4 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 18px;
+    /* font-weight: bold;   */
+  }
+
+  h5 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 25px;
+    font-weight: bold; 
+  }
+  
+  h6 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 18px;
+    font-weight: bold; 
+    color:rgb(214, 112, 112);
+  }
+
+a.navbar-brand {
+    font-family: 'Rock Salt', cursive;
+    }
+a.nav-link {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 14px;
+  font-weight: bold; 
+
+}
+#map,
+
+html {
+  height: 100%;
+} 
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 2px;
+    height: 10px;
+  }
+
+  .form-red::-webkit-slider-thumb {
+    background:rgb(214, 112, 112);
+  }
+  
+  .form-red::-moz-range-thumb {
+    background:rgb(214, 112, 112);
+  }
+  
+  .form-red::-ms-thumb {
+    background:rgb(214, 112, 112);
+  }
+ 
+  .form-white::-webkit-slider-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-moz-range-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-ms-thumb {
+    background: rgb(249, 250, 169);
+  }
+  .outcome {
+    font-family: "Sofia", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
