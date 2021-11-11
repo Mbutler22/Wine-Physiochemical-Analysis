@@ -62,7 +62,7 @@ Third Dashboard is a pie representation of the dataset which defines that we hav
 
 <img width="1055"  src="https://user-images.githubusercontent.com/81253160/141365394-28986866-ee8e-45d6-b74d-b307143a6cf7.png">
 
-Last Dashboard is quality defining over alcohol percentage. Quality is the dependent variable and other factors are independent variable which are responsible for defining the quality of red wine as strong, medium and light. 
+Final Dashboard is quality defining over alcohol percentage. Quality dependent on  other factors/parameters which are responsible for defining the quality of red wine as strong, medium and light. 
 
 <img width="1080" src="https://user-images.githubusercontent.com/81253160/141365561-cd2042f0-294b-4880-983f-b4414928adbd.png">
 
