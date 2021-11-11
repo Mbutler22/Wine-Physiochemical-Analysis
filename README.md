@@ -40,7 +40,9 @@ The scatter plots above measure each amount of a specific physiochemical in rela
 
 ## Machine Learning
 Our clean data from both datasets were used to build up two separate models – for red wine and white wine to predict the quality of the wine. We decided to use LogisticRegression Model first to get overview of our predictions. With accuracy about 74% from this model we decided to build additional models. With all 11 variables as an input these models performed as follows:
-White wine dataset:
+
+- White Wine Dataset:
+
 Model: KNeighborsClassifier
 Train score: 0.8448135039477267
 Test Score: 0.7665306122448979
@@ -53,18 +55,15 @@ Model: ExtraTreesClassifier
 Train score: 1.0
 Test Score: 0.8318367346938775
 
-
 Model: AdaBoostClassifier
 Train score: 0.7854614756329975
 Test Score: 0.7648979591836734
-
 
 Model: SVC
 Train score: 0.8126871766947998
 Test Score: 0.7787755102040816
 
-
-Red Wine dataset:
+- Red Wine Dataset:
 
 Model: KNeighborsClassifier
 Train score: 0.8198498748957465 
