@@ -43,7 +43,7 @@ The graph below shows the content percentage of fixed acidity, sulphate, sugar, 
 
 ## Red Wine Visualizations
 
-The first Dashboard describes various parameters which defines quality of red wine. The quality of red wine is categorized as strong, medium and light on the basis of alcohol content and on various parameters responsible for categoriing red wine  as Strong, Medium and Light.
+The first Dashboard describes various parameters which defines quality of red wine. The quality of red wine is categorized as strong, medium and light on the basis of alcohol content and on various parameters responsible for cateegorizing red wine  as Strong, Medium and Light.
 
 <img width="1055" src="https://user-images.githubusercontent.com/81253160/141364906-1240357e-24a1-4dce-b1c0-5d07bde01c0d.png">
 
