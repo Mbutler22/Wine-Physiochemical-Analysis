@@ -20,8 +20,8 @@ We also leveraged Tableau for data analysis prior to creating our model.
 
 
 ## Data Sources 
-•	We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables: fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality. We used Tableau for the visualizations and correlation analysis of those features.
-•	Bonus: https://www.kaggle.com/christopheiv/winemagdata130k Use selected variables from this data set (price, region, country...), to build the machine learning model to be able to predict quality of wine.
+* We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables: fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality. We used Tableau for the visualizations and correlation analysis of those features.
+* Bonus: https://www.kaggle.com/christopheiv/winemagdata130k Use selected variables from this data set (price, region, country...), to build the machine learning model to be able to predict quality of wine.
 
 ## Coding Files
 
