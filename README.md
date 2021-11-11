@@ -50,6 +50,8 @@ The first Dashboard describes various parameters which defines quality of red wi
 
 Second Dashboard defines the Quality of Red Wine on various chemical parameters and their correlation with quality.
 
+
+
 Less significance in defining quality of Red wine:- Fixed Acidity, Chlorides, Citric Acid, Density, PH, Volatile Acidity
 More significance in defining quality of Red wine :- Alcohol percentage, Free sulfur Dioxide, Residual sugar,  sulphates, Total Sulfur Dioxide
 
