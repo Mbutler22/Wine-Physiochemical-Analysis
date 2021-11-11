@@ -15,6 +15,8 @@ In addition, we tried to build a model for prediction of the quality based on th
 
 We also leveraged Tableau for data analysis prior to creating our model.
 
+Then, we deployed a website onto Heroku and enhanced the user experience with bootstrap and CSS styling.
+
 
 ## Table of COntents
 
