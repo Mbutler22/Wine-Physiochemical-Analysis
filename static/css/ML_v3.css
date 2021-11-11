@@ -41,7 +41,11 @@ h1 {
     font-family: 'Montserrat', sans-serif; 
     font-size: 18px;
     font-weight: bold; 
+<<<<<<< HEAD:static/css/ML_v3.css
     color:rgb(214, 112, 112);
+=======
+    color:rgb(110, 5, 5);
+>>>>>>> fa6aff44f7b4256bf2156bd49f6a4f1972d3490e:static/css/ML.css
   }
 
 a.navbar-brand {
@@ -78,6 +82,7 @@ html {
   }
 
   .form-red::-webkit-slider-thumb {
+<<<<<<< HEAD:static/css/ML_v3.css
     background:rgb(214, 112, 112);
   }
   
@@ -87,6 +92,17 @@ html {
   
   .form-red::-ms-thumb {
     background:rgb(214, 112, 112);
+=======
+    background: rgb(207, 10, 10);
+  }
+  
+  .form-red::-moz-range-thumb {
+    background: rgb(207, 10, 10);
+  }
+  
+  .form-red::-ms-thumb {
+    background: rgb(207, 10, 10);
+>>>>>>> fa6aff44f7b4256bf2156bd49f6a4f1972d3490e:static/css/ML.css
   }
  
   .form-white::-webkit-slider-thumb {
