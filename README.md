@@ -43,12 +43,12 @@ The graph below shows the content percentage of fixed acidity, sulphate, sugar, 
 
 ## Red Wine Visualizations
 
-The first Dashboard describes various parameters which defines quality of red wine. The quality of red wine is categorized as strong, medium and light on the basis of alcohol content and various parameters responsible in defining the quality as Strong, Medium and Light.
+The first Dashboard describes various parameters which defines quality of red wine. The quality of red wine is categorized as strong, medium and light on the basis of alcohol content and on various parameters responsible for categoriing red wine  as Strong, Medium and Light.
 
 <img width="1055" src="https://user-images.githubusercontent.com/81253160/141364906-1240357e-24a1-4dce-b1c0-5d07bde01c0d.png">
 
 
-Second Dashboard defines the Quality of Red Wine on various chemical parameters and their correlation with quality.
+Second Dashboard describes the Quality of Red Wine on various chemical parameters and their correlation with quality.
 
 <img width="1055" src="https://user-images.githubusercontent.com/81253160/141365162-c353022b-d99f-4a4c-9e9d-effeea4e6cc0.png">
 
@@ -75,12 +75,57 @@ Our clean data from both datasets were used to build up two separate models – 
 
 - White Wine Dataset:
 
-![image](static/img/whitewinemodels.png)
+Model: KNeighborsClassifier
 
+Train score: 0.8448135039477267
+Test Score: 0.7665306122448979
+
+Model: RandomForestClassifier
+
+Train score: 1.0
+Test Score: 0.8375510204081633
+
+Model: ExtraTreesClassifier
+
+Train score: 1.0
+Test Score: 0.8318367346938775
+
+Model: AdaBoostClassifier
+
+Train score: 0.7854614756329975
+Test Score: 0.7648979591836734
+
+Model: SVC
+
+Train score: 0.8126871766947998
+Test Score: 0.7787755102040816
 
 - Red Wine Dataset:
 
-![image](static/img/redwinemodels.png)
+Model: KNeighborsClassifier
+
+Train score: 0.8198498748957465 
+Test Score: 0.7025 
+
+Model: RandomForestClassifier 
+
+Train score: 1.0 
+Test Score: 0.81 
+
+Model: ExtraTreesClassifier
+
+Train score: 1.0 
+Test Score: 0.8125 
+
+Model: AdaBoostClassifier 
+
+Train score: 0.8006672226855713 
+Test Score: 0.75 
+
+Model: SVC
+
+Train score: 0.8023352793994996
+Test Score: 0.76
 
 
 The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model we applied feature importance calculation to choose which of the features of our data are most helpful towards our goal – faster training, interpretability and also to help to validate the relevant variables for our models. Then we selected the top N most important features using selection mechanism (SelectFromModel).
