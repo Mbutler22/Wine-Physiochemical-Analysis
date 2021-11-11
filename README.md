@@ -68,7 +68,7 @@ Final Dashboard is quality defining over alcohol percentage. Quality dependent o
 
 In tableau quality is defined as strong, medium and light which relates to good quality and bad quality in machine learning model.
 
-I found out that some parameters which has lower significance in overall quality of red wine has high significance in defining strong quality of like PH which has a high significance in strong quality of red wine
+I found out that some parameters which has lower significance in overall quality of red wine has high significance in defining strong quality like PH which has high significance in defining strong quality of red wine.
 
 
 ## Machine Learning
