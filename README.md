@@ -39,6 +39,11 @@ The scatter plots above measure each amount of a specific physiochemical in rela
 
 
 
+![White Wine per content % Dashboard](https://user-images.githubusercontent.com/83027069/141358951-98653b4c-a055-42f7-b381-9283d1195474.png)
+
+
+
+
 ## Technologies
 
 * Python (Flask, Json, Matplotlib, Numpy, Pandas, Seaborn, Sklearn)
