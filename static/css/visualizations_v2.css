@@ -6,7 +6,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url("../img/ML_background.jpg");
+  background-image: url("../img/visualizations_background_v3.jpg");
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
   color: white;
@@ -20,28 +20,37 @@ h1 {
     text-align: center;
   } 
 
+ 
+  h2 {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 18px;
+  /* font-weight: bold;   */
+  }
+
   h3 {
     font-family: 'Rock Salt', cursive;
     font-size: 28px;
     text-align: center;
-  } 
-  h4 {
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 18px;
-    /* font-weight: bold;   */
   }
+  h4 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    text-align: center;
+  } 
+
 
   h5 {
-    font-family: 'Rock Salt', cursive;
-    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     font-weight: bold; 
+    text-align: left;
   }
   
   h6 {
     font-family: 'Montserrat', sans-serif; 
     font-size: 18px;
     font-weight: bold; 
-    color:rgb(110, 5, 5);
+    color:rgb(214, 112, 112);
   }
 
 a.navbar-brand {
@@ -77,31 +86,4 @@ html {
     height: 10px;
   }
 
-  .form-red::-webkit-slider-thumb {
-    background: rgb(207, 10, 10);
-  }
-  
-  .form-red::-moz-range-thumb {
-    background: rgb(207, 10, 10);
-  }
-  
-  .form-red::-ms-thumb {
-    background: rgb(207, 10, 10);
-  }
- 
-  .form-white::-webkit-slider-thumb {
-    background: rgb(249, 250, 169);
-  }
-  
-  .form-white::-moz-range-thumb {
-    background: rgb(249, 250, 169);
-  }
-  
-  .form-white::-ms-thumb {
-    background: rgb(249, 250, 169);
-  }
-  .outcome {
-    font-family: "Sofia", sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-  }
+
