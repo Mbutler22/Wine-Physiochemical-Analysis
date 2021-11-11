@@ -41,7 +41,7 @@ h1 {
     font-family: 'Montserrat', sans-serif; 
     font-size: 18px;
     font-weight: bold; 
-    color:darkred;
+    color:rgb(110, 5, 5);
   }
 
 a.navbar-brand {
@@ -78,15 +78,15 @@ html {
   }
 
   .form-red::-webkit-slider-thumb {
-    background: rgb(110, 5, 5);
+    background: rgb(207, 10, 10);
   }
   
   .form-red::-moz-range-thumb {
-    background: rgb(110, 5, 5);
+    background: rgb(207, 10, 10);
   }
   
   .form-red::-ms-thumb {
-    background: rgb(110, 5, 5);
+    background: rgb(207, 10, 10);
   }
  
   .form-white::-webkit-slider-thumb {
