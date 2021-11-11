@@ -31,7 +31,21 @@ https://wine-quality-testing.herokuapp.com/index.html
 * [Team Members](#team-members)
 
 ## Data Sources 
-* We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables: fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality. We used Tableau for the visualizations and correlation analysis of those features.
+* We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables:
+* We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal (https://archive.ics.uci.edu/ml/datasets/Wine+Quality).
+We utilized Tableau to visualize correlation between wine quality and physicochemical tests (e.g. fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality).
+  * Volatile Acidity: the amount of acetic acids in wine, which at too high of levels can lead to an unpleasant, vinegar taste Higher levels indicating wine spoilage.
+  * Total Sulfur Dioxide (SO2): is the amount of free & bound forms of SO2. Legal limit in US is 350 mg/l. SO2 is required to make high-quality wines that can stand the test of time. Sweeter wines usally get a little bit more for extra protection.
+  * Free Sulfur Dioxide (SO2): it prevents microbial growth and the oxidation of wine. SO2 that is present in wine but has not yet reacted is considered “free.” Free SO2 content is usually around 25 mg/L at bottling time for the whites and 30 mg/L for the reds. 
+  * Density: sweeter wines have a higher density.The density of wine is primarily determined by the concentration of alcohol, sugar, glycerol, and other dissolved solids.
+  * Sulphates: they are there by natural processes, type of mineral salt.
+  * Citric Acid: acts as a preservative to increase acidity (small quantities add freshness and flavor to wines)
+  * Fixed acidity: are non-volatile acids that do not evaporate readily 
+  * pH: describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic)
+  * Residual sugar: is the amount of sugar remaining after fermentation stops. The key is to have a perfect balance between — sweetness and sourness (wines > 45g/l are sweet)
+  * Alcohol: the percent alcohol content of the wine
+  * Chlorides: the amount of salt in the wine
+  * Quality: the sensory data, median
 * Bonus: https://www.kaggle.com/christopheiv/winemagdata130k Use selected variables from this data set (price, region, country...), to build the machine learning model to be able to predict quality of wine.
 
 ## Coding Files
