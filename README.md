@@ -76,57 +76,11 @@ Our clean data from both datasets were used to build up two separate models – 
 
 - White Wine Dataset:
 
-Model: KNeighborsClassifier
-
-Train score: 0.8448135039477267
-Test Score: 0.7665306122448979
-
-Model: RandomForestClassifier
-
-Train score: 1.0
-Test Score: 0.8375510204081633
-
-Model: ExtraTreesClassifier
-
-Train score: 1.0
-Test Score: 0.8318367346938775
-
-Model: AdaBoostClassifier
-
-Train score: 0.7854614756329975
-Test Score: 0.7648979591836734
-
-Model: SVC
-
-Train score: 0.8126871766947998
-Test Score: 0.7787755102040816
+![image](static/img/whitewinemodels.png)
 
 - Red Wine Dataset:
 
-Model: KNeighborsClassifier
-
-Train score: 0.8198498748957465 
-Test Score: 0.7025 
-
-Model: RandomForestClassifier 
-
-Train score: 1.0 
-Test Score: 0.81 
-
-Model: ExtraTreesClassifier
-
-Train score: 1.0 
-Test Score: 0.8125 
-
-Model: AdaBoostClassifier 
-
-Train score: 0.8006672226855713 
-Test Score: 0.75 
-
-Model: SVC
-
-Train score: 0.8023352793994996
-Test Score: 0.76
+![image](static/img/redwinemodels.png)
 
 
 The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model we applied feature importance calculation to choose which of the features of our data are most helpful towards our goal – faster training, interpretability and also to help to validate the relevant variables for our models. Then we selected the top N most important features using selection mechanism (SelectFromModel).
