@@ -63,6 +63,8 @@ Third Dashboard is a pie representation of the dataset which defines that we hav
 
 Last Dashboard is quality defining over alcohol percentage. Quality is the dependent variable and is other factors are independent variable which are responsible for defining the quality of red wine as strong, medium and light. 
 
+<img width="1080" src="https://user-images.githubusercontent.com/81253160/141365561-cd2042f0-294b-4880-983f-b4414928adbd.png">
+
 In tableau quality is defined as strong, medium and light which relates to good quality and bad quality in machine learning model.
 
 I found out that some parameters which has lower significance in overall quality of red wine has high significance in defining strong quality of like PH which has a high significance in strong quality of red wine
