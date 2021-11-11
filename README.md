@@ -135,11 +135,11 @@ The models did a good job in achieving decent accuracy scores. Based on our resu
 
 - White wine:
 
- ![features](/static/img/white_wines_features.png)
+ ![features](static/img/whitewinefeatures.png)
  
 -  Red Wine:
  
- ![features](/static/img/red_wine_features.png) 
+ ![features](static/img/redwinefeatures.png) 
 
 
 
