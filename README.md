@@ -40,6 +40,28 @@ The graph below shows the content percentage of fixed acidity, sulphate, sugar, 
 
 ![White Wine per content % Dashboard](https://user-images.githubusercontent.com/83027069/141358951-98653b4c-a055-42f7-b381-9283d1195474.png)
 
+
+## Red Wine Visualization Description
+
+The first Dashboard describes various parameters which defines quality of red wine. The quality of red wine is categorized as strong, medium and light on the basis of alcohol content and various parameters responsible in defining the quality as Strong, Medium and Light.
+
+
+Second Dashboard defines the Quality of Red Wine on various chemical parameters and their correlation with quality.
+
+Less significance in defining quality of Red wine:- Fixed Acidity, Chlorides, Citric Acid, Density, PH, Volatile Acidity
+More significance in defining quality of Red wine :- Alcohol percentage, Free sulfur Dioxide, Residual sugar,  sulphates, Total Sulfur Dioxide
+
+
+Third Dashboard is a pie representation of the dataset which defines that we have more strong wine quality data and less light quality data. When you hover over the graph, you can see the parameters and their content in various type of quality.
+
+
+Last Dashboard is quality defining over alcohol percentage. Quality is the dependent variable and is other factors are independent variable which are responsible for defining the quality of red wine as strong, medium and light. 
+
+In tableau quality is defined as strong, medium and light which relates to good quality and bad quality in machine learning model.
+
+I found out that some parameters which has lower significance in overall quality of red wine has high significance in defining strong quality of like PH which has a high significance in strong quality of red wine
+
+
 ## Machine Learning
 Our clean data from both datasets were used to build up two separate models – for red wine and white wine to predict the quality of the wine. We decided to use LogisticRegression Model first to get overview of our predictions. With accuracy about 74% from this model we decided to build additional models. With all 11 variables as an input these models performed as follows:
 
