@@ -18,7 +18,7 @@ We also leveraged Tableau for data analysis prior to creating our model.
 Then, we deployed a website onto Heroku and enhanced the user experience with bootstrap and CSS styling.
 
 
-## Table of COntents
+## Table of Contents
 
 
 ## Data Sources 
