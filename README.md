@@ -17,15 +17,17 @@ We decided to use Tableau for further exploration of those datasets. All twelve 
 
 Then, we deployed a website onto Heroku and enhanced the user experience with bootstrap and CSS styling.
 
+## Heroku Website Deployment
+
+https://wine-quality-testing.herokuapp.com/index.html
 
 ## Table of Contents
 * [Data Sources](#data-sources)
+* [Heroku Website Deployment](#heroku-website-deployment)
 * [Technologies and Libraries](#technologies-and-libraries)
 * [Coding files](#coding-files)  
 * [Tableau Visualizations](#tableau-visualizations) 
 * [Machine Learning](#machine-learning) 
-* [Heroku Website Deployment](#heroku-website-deployment)
-* [Future Development](#future-development)
 * [Team Members](#team-members)
 
 ## Data Sources 
@@ -33,12 +35,12 @@ Then, we deployed a website onto Heroku and enhanced the user experience with bo
 * Bonus: https://www.kaggle.com/christopheiv/winemagdata130k Use selected variables from this data set (price, region, country...), to build the machine learning model to be able to predict quality of wine.
 
 ## Coding Files
-* Jupyter notebook - Data from both datasets were loaded into jupyter notebook and ETL process was performed to identify possible missing values and inconsistencies in our data
-* HTML
-* CSS
-* Machine Learning
-   * unsupervised learning
-   * supervised learning
+* Jupyter notebooks
+    * ETL Process - Data from both datasets were loaded into jupyter notebook and ETL process was performed to identify possible missing values and inconsistencies in our data
+    * Machine Learning (unsupervised) - Matplotlib, Numpy
+    * Machine Learning (supervised) - Seaborn, Sklearn
+* HTML / CSS - hjh
+* Joblib - dfdfdd
 
 ## Tableau Visualizations
 
@@ -140,34 +142,6 @@ The dataset originally contains information on 129,971 wines. After the ETL proc
 
 
 
-## Technologies
-
-* Python (Flask, Json, Matplotlib, Numpy, Pandas, Seaborn, Sklearn)
-* JavaScript (D3)
-* HTML/ CSS (Bootstrap)
-* Tableau
-* Heroku
-
-
-
-## Project Outline
-
-1. Shuchi  - ETL: Extract Data from : csv files, json,Excel files
-2. Dasa/Tinu/Joshua - Use Pandas Jupyter Notebook for data preprocessing and selection of 
-the features for input to machine learning models
-3. Dasa/Joshua/Tinuola - Machine Learning : we plan to use LinearRegression, 
-RandomForestClassifier, Deep Neural to train models and evaluate 
-models using testing data to choose the model with highest 
-performance score 
-4. Melissa/Dasa/Joshua - HTML/CSS : build up webpage with user data selection based on our features 
-5. Shuchi/Megan - Tableau: – visualization :( Red Wine Visualizations - Shuchi, White Wine Visualizations - Megan)
-6. Dasa/Joshua/Melissa - Flask
-7. Megan - Heroku 
-
-
-## Heroku Website Deployment
-
-https://wine-quality-testing.herokuapp.com/index.html
 
 ## Team Members
 * Melissa Diep
