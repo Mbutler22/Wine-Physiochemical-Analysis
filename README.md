@@ -22,7 +22,7 @@ We decided to use Tableau for further exploration of those datasets. All twelve 
 
 
  
-Using box and whisper charts we compared each physiochemical percentage against the quality of wine. The quality ranged from 1-9 ( 9 being the best quality rating), and looked at the amount of a specific type a chemical in the quality rating.  The chemicals with the greatest amount of outliers were fixed acidity, chlorides, and citric acid.  This can tell that the lower the quality of wine, the greater amount of these particular chemicals we can find.
+The dashboard below uses box and whisper charts we compared each physiochemical percentage against the quality of wine. The quality ranged from 1-9 ( 9 being the best quality rating), and looked at the amount of a specific type a chemical in the quality rating.  The chemicals with the greatest amount of outliers were fixed acidity, chlorides, and citric acid.  This can tell that the lower the quality of wine, the greater amount of these particular chemicals we can find.
 
 
 ![image](https://user-images.githubusercontent.com/83027069/141357625-d95719db-1cfa-440f-8ac0-a66b497a4f97.png)
@@ -35,7 +35,7 @@ The scatter plots above measure each amount of a specific physiochemical in rela
 ![image](https://user-images.githubusercontent.com/83027069/141357716-5498d017-1e4f-4c0b-a7a8-c19d02b0a854.png)
 
 
-The graph below shows the content percentage of fixed acidity, sulphate, sugar, and alcohol ranging from high amounts to low amounts based on the quality.  The lower the quality of wine, the higher sugar and acid amounts.  This is an indication that the better quality of alcohol, the more expensive it is thus using more sulphates and less sugar.  More expensive wine is usually not very sweet and contains a very high alcohol percentage.
+The graphs below show the content percentage of fixed acidity, sulphate, sugar, and alcohol ranging from high amounts to low amounts based on the quality.  The lower the quality of wine, the higher sugar and acid amounts.  This is an indication that the better quality of alcohol, the more expensive it is thus using more sulphates and less sugar.  More expensive wine is usually not very sweet and contains a very high alcohol percentage.
 
 
 ![White Wine per content % Dashboard](https://user-images.githubusercontent.com/83027069/141358951-98653b4c-a055-42f7-b381-9283d1195474.png)
