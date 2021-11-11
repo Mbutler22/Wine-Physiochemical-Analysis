@@ -13,25 +13,37 @@ Wine quality refers to the factors that go into producing a wine, as well as the
 In our models we analyzed the effects of selected features based on physicochemical (input) variables by using Random Forest Classifier. We built two models: for red wine and white wine to predict the quality score of the wine (output variable). The model assumes that for the good quality wine (as a Good Choice from our model) the score is 6 and higher (from scale 1 to 10). We also used KMeans model, with PCA on the red wine dataset and visualized the clusters.
 In addition, we tried to build a model for prediction of the quality based on the wine price, variety and country of origin. Our prediction comes with   % accuracy.
 
-We also leveraged Tableau for data analysis prior to creating our model.
+We decided to use Tableau for further exploration of those datasets. All twelve variables in two datasets were considered for correlation analysis and visualization to identify features which correlate the most with the quality. 
 
 Then, we deployed a website onto Heroku and enhanced the user experience with bootstrap and CSS styling.
 
 
 ## Table of Contents
-
+* [Data Sources](#data-sources)
+* [Technologies and Libraries](#technologies-and-libraries)
+* [Coding files](#coding-files)  
+* [Tableau Visualizations](#tableau-visualizations) 
+* [Machine Learning](#machine-learning) 
+* [Heroku Website Deployment](#heroku-website-deployment)
+* [Future Development](#future-development)
+* [Team Members](#team-members)
 
 ## Data Sources 
 * We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables: fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality. We used Tableau for the visualizations and correlation analysis of those features.
 * Bonus: https://www.kaggle.com/christopheiv/winemagdata130k Use selected variables from this data set (price, region, country...), to build the machine learning model to be able to predict quality of wine.
 
 ## Coding Files
+* Jupyter notebook - Data from both datasets were loaded into jupyter notebook and ETL process was performed to identify possible missing values and inconsistencies in our data
+* HTML
+* CSS
+* Machine Learning
+   * unsupervised learning
+   * supervised learning
 
-## Data ETL, EDA and Visualization
-Data from both datasets were loaded into jupyter notebook and ETL process was performed to identify possible missing values and inconsistencies in our data.
-We decided to use Tableau for further exploration of those datasets. All twelve variables in two datasets were considered for correlation analysis and visualization to identify features which correlate the most with the quality. 
+## Tableau Visualizations
 
-## White Wine Visualizations
+
+### White Wine Visualizations and Analysis
 
 
  
@@ -54,7 +66,7 @@ The bar graphs below show the content percentage of fixed acidity, sulphate, sug
 ![White Wine per content % Dashboard](https://user-images.githubusercontent.com/83027069/141358951-98653b4c-a055-42f7-b381-9283d1195474.png)
 
 
-## Red Wine Visualizations and Analysis
+### Red Wine Visualizations and Analysis
 
 The first Dashboard describes various parameters which defines quality of red wine. The quality of red wine is categorized as strong, medium and light on the basis of alcohol content and on various parameters responsible for cateegorizing red wine  as Strong, Medium and Light.
 
@@ -97,6 +109,7 @@ Our clean data from both datasets were used to build two separate models – for
 
 
 The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict the quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model, we applied feature importance calculation to choose which of our data features are most helpful towards our goal – faster training, interpretability, and to help validate the relevant variables for our models. Then we selected the top N most important features using the selection mechanism (SelectFromModel).
+
 
 ### Feature importance for datasets:
 
