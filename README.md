@@ -17,18 +17,18 @@ We decided to use Tableau for further exploration of those datasets. All twelve 
 
 Then, we utilized HTML with bootstrap and CSS styling and flask capabilities to deploy a website onto Heroku
 
-## Heroku Website Deployment
-
-https://wine-quality-testing.herokuapp.com/index.html
-
 ## Table of Contents
-* [Data Sources](#data-sources)
 * [Heroku Website Deployment](#heroku-website-deployment)
-* [Technologies and Libraries](#technologies-and-libraries)
+* [Data Sources](#data-sources)
 * [Coding files](#coding-files)  
 * [Tableau Visualizations](#tableau-visualizations) 
 * [Machine Learning](#machine-learning) 
 * [Team Members](#team-members)
+
+## Heroku Website Deployment
+
+https://wine-quality-testing.herokuapp.com/index.html
+
 
 ## Data Sources 
 * We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables:
