@@ -72,7 +72,7 @@ I found out that some parameters which has lower significance in overall quality
 
 
 ## Machine Learning
-Our clean data from both datasets were used to build up two separate models – for red wine and white wine to predict the quality of the wine. We decided to use LogisticRegression Model first to get overview of our predictions. With accuracy about 74% from this model we decided to build additional models. With all 11 variables as an input these models performed as follows:
+Our clean data from both datasets were used to build two separate models – for red wine and white wine to predict the quality of the wine. We decided to use LogisticRegression Model first to get an overview of our predictions. With an accuracy of about 74% from this model, we decided to build additional models. With all 11 variables as an input, these models performed as follows:
 
 - White Wine Dataset:
 
@@ -83,7 +83,7 @@ Our clean data from both datasets were used to build up two separate models – 
 ![image](static/img/redwinemodels.png)
 
 
-The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model we applied feature importance calculation to choose which of the features of our data are most helpful towards our goal – faster training, interpretability and also to help to validate the relevant variables for our models. Then we selected the top N most important features using selection mechanism (SelectFromModel).
+The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict the quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model, we applied feature importance calculation to choose which of our data features are most helpful towards our goal – faster training, interpretability, and to help validate the relevant variables for our models. Then we selected the top N most important features using the selection mechanism (SelectFromModel).
 
 ### Feature importance for datasets:
 
@@ -97,9 +97,9 @@ The models did a good job in achieving decent accuracy scores. Based on our resu
 
 
 
-The selection method derived from our models the most important features, which we used in the next step to build another model to predict quality of wines.
-For the white wines four features were selected: alcohol, volatile acidity, density and free sulfur dioxide, for red wines five features were selected: alcohol, sulphates, volatile acidity, total sulfur dioxide and density.
-On our website, we accept the selected features as an input for each model and the selection is uploaded and ran through machine learning models. The quality output as a “Good Choice” predict that the wine will be within a good quality range, and on the other end ”...there are better wines” output indicate that predicted quality is below the range for good wines.  
+The selection method chose the most important features from our model, which we used in the next step to build a different model to predict the quality of wines. For the white wines, four features were selected: alcohol, volatile acidity, density, and free sulfur dioxide. For red wines, five features were selected: alcohol, sulphates, volatile acidity, total sulfur dioxide, and density. 
+On our website, we accept the selected features as user input, and then the values are uploaded and run through the selected random forest classifier machine learning model. The quality prediction output of wines within the good quality range (6-10) receive the message, “Good Choice,” and wines in the poor quality range (1-5) receive the message, ”...there are better wines”.
+  
 
 ### K-means Model
 In our K-means model we used the data about the red wine and tried to predict similar clusters based on 12 variables (fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality).
