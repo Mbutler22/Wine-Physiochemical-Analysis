@@ -54,7 +54,8 @@ Second Dashboard describes the Quality of Red Wine on various chemical parameter
 
 
 -Parameters which have Less significance in defining quality of Red wine:- Fixed Acidity, Chlorides, Citric Acid, Density, PH, Volatile Acidity.
--Parameeters which have More significance in defining quality of Red wine :- Alcohol percentage, Free sulfur Dioxide, Residual sugar,  sulphates, Total Sulfur Dioxide.
+
+-Parameters which have More significance in defining quality of Red wine :- Alcohol percentage, Free sulfur Dioxide, Residual sugar,  sulphates, Total Sulfur Dioxide.
 
 
 Third Dashboard is a pie representation of the dataset which defines that we have more strong wine quality data and less light quality data. When you hover over the graph, you can see the parameters and their content in various type of quality.
