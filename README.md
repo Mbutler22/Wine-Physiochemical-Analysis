@@ -50,7 +50,7 @@ https://wine-quality-testing.herokuapp.com/index.html
 ## Coding Files
 * Jupyter notebooks
     * ETL Process - Data from both datasets were loaded into jupyter notebook and ETL process was performed to identify possible missing values and inconsistencies in our data
-    * Machine Learning (unsupervised) - Matplotlib, Numpy
+    * Machine Learning (unsupervised) - Matplotlib, Numpy, Sklearn
     * Machine Learning (supervised) - Seaborn, Sklearn, Numpy, Matplotlib, Joblib
 * HTML / CSS
 
