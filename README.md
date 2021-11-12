@@ -6,7 +6,7 @@
 
 
 ## Project Information
-In our project we created a model that would predict wine quality using supervised and unsupervised machine learning.
+In our project we created a model that would predict the quality of a user's custom wine creation using supervised and unsupervised machine learning.
 
 Wine quality refers to the factors that go into producing a wine, as well as the indicators or characteristics that tell you if the wine is of high quality. The wine industry is investing in new technologies for both wine making and selling processes. Wine certification and quality assessment are key elements within this context. Quality evaluation is often part of the certification process and can be used to improve wine making (by identifying the most influential factors) and to stratify wines such as premium brands (useful for setting prices). When you know what influences and signifies wine quality, you’ll be in a better position to make good purchases.
 
