@@ -32,7 +32,7 @@ https://wine-quality-testing.herokuapp.com/index.html
 
 
 ## Data Sources 
-* We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observation for the red wine and 4898 for the white wine. In each dataset there are 12 variables:
+* We leveraged data from two datasets, related to red and white variants of the "Vinho Verde" wine, from the north of Portugal. https://archive.ics.uci.edu/ml/datasets/Wine+Quality (winequality-red.csv, winequality-white.csv) (P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.) In our datasets, there is 1599 observations for the red wine and 4898 for the white wine. In each dataset there are 12 variables:
   * Volatile Acidity: the amount of acetic acids in wine, which at too high of levels can lead to an unpleasant, vinegar taste Higher levels indicating wine spoilage.
   * Total Sulfur Dioxide (SO2): is the amount of free & bound forms of SO2. Legal limit in US is 350 mg/l. SO2 is required to make high-quality wines that can stand the test of time. Sweeter wines usally get a little bit more for extra protection.
   * Free Sulfur Dioxide (SO2): it prevents microbial growth and the oxidation of wine. SO2 that is present in wine but has not yet reacted is considered “free.” Free SO2 content is usually around 25 mg/L at bottling time for the whites and 30 mg/L for the reds. 
