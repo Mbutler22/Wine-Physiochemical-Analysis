@@ -17,9 +17,9 @@ class WWines:
         self.country = int(request.form['country'])
         self.price = int(request.form['price'])
         self.variety = int(request.form['variety'])
-        print(self.country)
-        print(self.price)
-        print(self.variety)
+        # print(self.country)
+        # print(self.price)
+        # print(self.variety)
 
 
 
