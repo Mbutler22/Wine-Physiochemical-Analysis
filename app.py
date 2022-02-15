@@ -103,16 +103,19 @@ def red_data():
 
 @app.route("/machine_learning_worldwines.html")
 def machine_learning_worldwines():
-   global rvolacidity, rTotalSulfur, rDensity, rSulfates, rAlcohol
-   global wAcidity, wFreeSulfur, wDensity, wAlcohol
+  # global rvolacidity, rTotalSulfur, rDensity, rSulfates, rAlcohol
+  # global wAcidity, wFreeSulfur, wDensity, wAlcohol
    global gwine 
-   global routcome, woutcome  
+  # global routcome, woutcome  
 
-   return render_template("machine_learning_worldwines.html", routcome=routcome, rvolacidity=rvolacidity,\
-                            rTotalSulfur=rTotalSulfur , rDensity= rDensity, rSulfates=rSulfates, rAlcohol=rAlcohol,\
-                            woutcome = woutcome, wAcidity=wAcidity, wFreeSulfur=wFreeSulfur,wDensity = wDensity,\
-                            wAlcohol =wAlcohol,\
-                            gwine=gwine)
+  # return render_template("machine_learning_worldwines.html", routcome=routcome, rvolacidity=rvolacidity,\
+                           # rTotalSulfur=rTotalSulfur , rDensity= rDensity, rSulfates=rSulfates, rAlcohol=rAlcohol,\
+                           # woutcome = woutcome, wAcidity=wAcidity, wFreeSulfur=wFreeSulfur,wDensity = wDensity,\
+                           # wAlcohol =wAlcohol,\
+                           # gwine=gwine)
+
+   return render_template("machine_learning_worldwines.html", gwine=gwine)
+
 
 @app.route('/world_data', methods=['POST'])
 def world_data():
@@ -130,7 +133,7 @@ def world_data():
         gwine.outcome="Hmm... there are better wines"
     else:
         gwine.outcome="Good Choice!"
-    return redirect("/machine_learning.html")    
+    return redirect("/machine_learning_worldwines.html")    
 
  
 
@@ -142,7 +145,7 @@ def reset():
 def resetValues():
     global rvolacidity, rTotalSulfur, rDensity, rSulfates, rAlcohol
     global wAcidity, wFreeSulfur, wDensity, wAlcohol
-    global gwine 
+  #  global gwine 
     global routcome, woutcome 
     
     routcome = ""
@@ -157,7 +160,19 @@ def resetValues():
     wDensity = 0.987
     wAlcohol = 8.0
 
+   # gwine = WWines()
+
+
+@app.route("/reset1.html")
+def resetW():
+    resetValuesw()
+    return redirect("/machine_learning_worldwines.html")  
+
+def resetValuesw():
+    global gwine 
+        
     gwine = WWines()
+
 
 
 @app.route("/team.html")
@@ -165,6 +180,7 @@ def team():
     return render_template("team.html")
 
 resetValues()
+resetValuesw()
 
 if __name__ == "__main__":
     app.run(debug=True)
