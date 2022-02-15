@@ -101,6 +101,19 @@ def red_data():
         routcome="Good Choice!"
     return redirect("/machine_learning.html")
 
+@app.route("/machine_learning_worldwines.html")
+def machine_learning_worldwines():
+   global rvolacidity, rTotalSulfur, rDensity, rSulfates, rAlcohol
+   global wAcidity, wFreeSulfur, wDensity, wAlcohol
+   global gwine 
+   global routcome, woutcome  
+
+   return render_template("machine_learning_worldwines.html", routcome=routcome, rvolacidity=rvolacidity,\
+                            rTotalSulfur=rTotalSulfur , rDensity= rDensity, rSulfates=rSulfates, rAlcohol=rAlcohol,\
+                            woutcome = woutcome, wAcidity=wAcidity, wFreeSulfur=wFreeSulfur,wDensity = wDensity,\
+                            wAlcohol =wAlcohol,\
+                            gwine=gwine)
+
 @app.route('/world_data', methods=['POST'])
 def world_data():
     global gwine
@@ -119,6 +132,7 @@ def world_data():
         gwine.outcome="Good Choice!"
     return redirect("/machine_learning.html")    
 
+ 
 
 @app.route("/reset.html")
 def reset():
