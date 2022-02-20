@@ -30,12 +30,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/visualizations.html">About Data & Visualizations</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/machine_learning.html">Machine Learning Model</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Machine Learning Models
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/machine_learning.html">Red & White Wines</a></li> 
+
+                            <li><a class="dropdown-item" href="/machine_learning_worldwines.html">World Wines</a></li>
+                       </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/machine_learning_worldwines.html">Machine Learning Model World Wines</a>
-                    </li
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/team.html">Team</a>
@@ -65,20 +69,17 @@
                                     aria-controls="collapseDesc" class="text-white">
                                     World Wines Model</a></h3>
                         </div>
-                        <div class="col-sm-4 justify-content-right align-items-right text-right text-white"><button href="/reset1.html" class="btn btn-secondary btn-md"><a href="/reset1.html">Reset Values</a></button></div>
+                        <div class="col-sm-4 justify-content-right align-items-right text-right text-white"><button href="/reset1.html" class="btn btn-secondary btn-md"><a href="/reset1.html">,<b>Reset Values</b></a></button></div>
                         
                     </div>
                     <br>
                     <h4>
                         <div class="collapse" id="collapseDesc">
                             <div class="card card-body" style="background-color: rgba(0,0,0,.6); text-align: left">
-                                There are two datasets related to the red and white variants used in two separate models. 
-                                How to set the values:
-                                <h6>Volatile Acidity:</h6> are high acetic acid in wine which leads to an unpleasant vinegar taste.
-                                Higher levels indicating wine spoilage.
-                                <br>
-                                <h6>Total Sulfur Dioxide (SO2):</h6> is the amount of free & bound forms of SO2. Legal limit in US is 350 mg/l. SO2 is required to make high-quality wines that can stand the test of time.
-                                Sweeter wines usally get a little bit more for extra protection. 
+                                For our World Wines Model we used data about 84,881 wines, with selected data for the country,
+                                price, and variety of the wines. 
+                                The price range varies from $4.00 - $3,300.00.
+                                Available data are from seven countries with information about 33 varieties of the wines.
                                 <br>
                                 
                             </div>
@@ -101,7 +102,7 @@
                                 <h4> Country of Origin </h4>
                             </label>
                             <select class="custom-select form-control" id="country" name="country">
-                                <!-- <option selected>Select Country</option> -->
+                                <!--<option selected>Select </option>--> 
                                 <option value="1">Argentina</option>
                                 <option value="2">Australia</option>
                                 <option value="3">Canada</option>

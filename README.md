@@ -122,7 +122,7 @@ Our clean data from both datasets were used to build two separate models – for
 ![image](static/img/redwinemodels.png)
 
 
-The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict the quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model, we applied feature importance calculation to choose which of our data features are most helpful towards our goal – faster training, interpretability, and to help validate the relevant variables for our models. Then we selected the top N most important features using the selection mechanism (SelectFromModel).
+The models did a good job in achieving decent accuracy scores. Based on our results we decided to use RandomForest Classifier, where the accuracy to predict the quality of the wine was 83% for the white wines dataset and 81% for the red wine dataset. For each model, we applied feature importance calculation to choose which of our data features are most helpful towards our goal – faster training, interpretability, and helping to validate the relevant variables for our models. Then we selected the top N most important features using the selection mechanism (SelectFromModel).
 
 
 ### Feature importance for datasets:
@@ -143,13 +143,13 @@ On our website, we accept the selected features as user input, and then the valu
 
 ### K-means Model
 In our K-means model, we used the data about the red wine and tried to predict similar clusters based on 12 variables (fixed acidity, volatile acidity, citric acid, residual sugar chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol %, quality). We performed dimensionality reduction using the PCA method.This technique first standardized the data set.This standardization helps to minimze large differneces between the ranges from the initial variables.  Then calculated the explained variance ratio for both red and white wines. They are both less than 30%. The reduced data was used as an input for our K-means Model. The number of groups is represented by K. One of the most challenging tasks in this clustering algorithm is to choose the right values of K. We used the Elbow method to identify the right value for K. K -means clustering aims to converge on an optimal set of cluster centers - centroids. The results with clusters and centroids are shown in our K-means graph. 
-The k-means graph shows clusters been created by associating every observation with the mean closest to it. The centroids marked by X become the new mean of each cluster.
+The K-means graph shows clusters been created by associating every observation with the mean closest to it. The centroids marked by X become the new mean of each cluster.
 
  ### Bonus: World Wines Model
 
 We wanted to tackle the data about world wines from Kaggle and try to build a model which could give the quality output based on the price of the wine, country of origin, and variety of the wine. Those are information the consumers are usually considering before they choose a wine to buy. So, what will be the quality of the wine, can we predict the good quality of the wine based on our model?
 
-The dataset originally contains information on 129,971 wines. After the ETL process, we keep data about 84,881 wines, with selected columns for the country, price, and variety as input variables and points as an output variable. Points were in the range from 80 to 100, and there were transformed to binary classification, with 0 values for the range below 85.7 and 1 and good quality for the range from 85.7 to 100 (based on the distribution of the data). For the price information was necessary to use bins (the price range was from $4.00 - $3,300.00), as for the final input for the machine learning model. Data about 33 wine varieties from 7 countries are used for the model to predict the quality in the RandomForest Classifier Model, which works with 73% accuracy to predict the quality of the wine.
+The dataset originally contains information on 129,971 wines. After the ETL process, we kept the data about 84,881 wines, with selected columns for the country, price, and variety as input variables and points as an output variable. Points were in the range from 80 to 100, and there were transformed to binary classification, with 0 values for the range below 85.7 and 1 and good quality for the range from 85.7 to 100 (based on the distribution of the data). For the price information was necessary to use bins (the price range was from $4.00 - $3,300.00), as for the final input for the machine learning model. Data about 33 wine varieties from 7 countries are used for the model in the RandomForest Classifier Model, which works with 73% accuracy to predict the quality of the wine.
  
 
 
