@@ -1,4 +1,3 @@
-  
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
@@ -6,7 +5,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url("../img/visualizations_background_v3.jpg");
+  background-image: url("../img/ML_W_background.jpg");
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
   color: white;
@@ -20,30 +19,21 @@ h1 {
     text-align: center;
   } 
 
- 
-  h2 {
-  font-family: 'Montserrat', sans-serif; 
-  font-size: 18px;
-  /* font-weight: bold;   */
-  }
-
   h3 {
     font-family: 'Rock Salt', cursive;
     font-size: 28px;
     text-align: center;
-  }
-  h4 {
-    font-family: 'Rock Salt', cursive;
-    font-size: 30px;
-    text-align: center;
   } 
-
+  h4 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 18px;
+    /* font-weight: bold;   */
+  }
 
   h5 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 25px;
     font-weight: bold; 
-    text-align: left;
   }
   
   h6 {
@@ -60,14 +50,16 @@ a.nav-link {
   font-family: 'Montserrat', sans-serif; 
   font-size: 14px;
   font-weight: bold; 
+
 }
 
 .dropdown-item {
-  font-family: 'Montserrat', sans-serif; 
-  font-size: 14px;
-  font-weight: bold; 
-}
- 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 14px;
+    font-weight: bold; 
+  
+  } 
+
 #map,
 
 html {
@@ -92,4 +84,31 @@ html {
     height: 10px;
   }
 
-
+  .form-red::-webkit-slider-thumb {
+    background:rgb(214, 112, 112);
+  }
+  
+  .form-red::-moz-range-thumb {
+    background:rgb(214, 112, 112);
+  }
+  
+  .form-red::-ms-thumb {
+    background:rgb(214, 112, 112);
+  }
+ 
+  .form-white::-webkit-slider-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-moz-range-thumb {
+    background: rgb(249, 250, 169);
+  }
+  
+  .form-white::-ms-thumb {
+    background: rgb(249, 250, 169);
+  }
+  .outcome {
+    font-family: "Sofia", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+  }

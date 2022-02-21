@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quality Wine Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css" href="../static/css/ML_W_v5.css">
+
+</head>
+
+<body stype="overflow: hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mask gradient-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                Quality Wine Builder
+            </a>
+            <!-- <div class="d-flex"> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visualizations.html">About Data & Visualizations</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Machine Learning Models
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/machine_learning.html">Red & White Wines</a></li> 
+
+                            <li><a class="dropdown-item" href="/machine_learning_worldwines.html">World Wines</a></li>
+                       </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/team.html">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
+
+
+    </nav>
+
+    
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="container-fluid col-md-8"
+            style="background-color: rgba(0,0,0,.6);overflow:scroll;  height: 85vh; margin-top: 20px; margin-bottom: 20px; border:1px solid #cecece">
+            <!-- style="background-color: rgba(0,0,0,.6);overflow:scroll;  margin-top: 50px; width: 1300px; height: 700px; margin-left: 440px; border:1px solid #cecece"> -->
+            <div class="row">
+                <div class="col-lg-12 justify-content-center align-items-center text-center">
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <h3><a data-bs-toggle="collapse" href="#collapseDesc" role="button" aria-expanded="false"
+                                    aria-controls="collapseDesc" class="text-white">
+                                    World Wines Model</a></h3>
+                        </div>
+                        <div class="col-sm-4 justify-content-right align-items-right text-right text-white"><button href="/reset1.html" class="btn btn-secondary btn-md"><a href="/reset1.html">,<b>Reset Values</b></a></button></div>
+                        
+                    </div>
+                    <br>
+                    <h4>
+                        <div class="collapse" id="collapseDesc">
+                            <div class="card card-body" style="background-color: rgba(0,0,0,.6); text-align: left">
+                                For our World Wines Model we used data about 84,881 wines, with selected data for the country,
+                                price, and variety of the wines. 
+                                The price range varies from $4.00 - $3,300.00.
+                                Available data are from seven countries with information about 33 varieties of the wines.
+                                <br>
+                                
+                            </div>
+                        </div>
+                    </h4>
+    
+    <div class="row">
+
+        <div class="col-lg-12 justify-content-center align-items-center text-center">
+            <div class="col-lg-12 text-center">
+    <br>        
+    <br>
+    <br>        
+    <br>
+                
+                <form class="col-lg-12" action="{{ url_for('world_data') }}" method="post">
+                    <div class="row text-left">
+                        <div class="col-sm-4 form-group">
+                            <label for="country">
+                                <h4> Country of Origin </h4>
+                            </label>
+                            <select class="custom-select form-control" id="country" name="country">
+                                <!--<option selected>Select </option>--> 
+                                <option value="1">Argentina</option>
+                                <option value="2">Australia</option>
+                                <option value="3">Canada</option>
+                                <option value="4">France</option>
+                                <option value="5">Italy</option>
+                                <option value="6">Spain</option>
+                                <option value="7">US</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label for="price">
+                                <h4>Price (in $)</h4>
+                            </label>
+                            <select class="custom-select form-control" id="price" name="price">
+                                <!-- <option selected>Select Price</option> -->
+                                <option value="1">4.00 - 14.99</option>
+                                <option value="2">15.00 - 18.99</option>
+                                <option value="3">19.00 - 23.99</option>
+                                <option value="4">24.00 - 28.99</option>
+                                <option value="5">29.00 - 35.99</option>
+                                <option value="6">36.00 - 45.99</option>
+                                <option value="7">46.00 - 63.99</option>
+                                <option value="8">more than 64.00</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label for="variety">
+                                <h4>Variety</h4>
+                            </label>
+                            <select class="custom-select form-control" id="variety" name="variety">
+                                <!-- <option selected>Select Variety</option> -->
+                                <option value="1">Barbera</option>
+                                <option value="2">Bordeaux-style Red Blend</option>
+                                <option value="3">Bordeaux-style White Blend</option>
+                                <option value="4">Cabernet Franc</option>
+                                <option value="5">Cabernet Sauvignon</option>
+                                <option value="6">Champagne Blend</option>
+                                <option value="7">Chardonnay</option>
+                                <option value="8">Gamay</option>
+                                <option value="9">Gewürztraminer</option>
+                                <option value="10">Glera</option>
+                                <option value="11">Grenache</option>
+                                <option value="12">Malbec</option>
+                                <option value="13">Merlot</option>
+                                <option value="14">Nebbiolo</option>
+                                <option value="15">Petite Sirah</option>
+                                <option value="16">Pinot Grigio</option>
+                                <option value="17">Pinot Gris</option>
+                                <option value="18">Pinot Noir</option>
+                                <option value="19">Red Blend</option>
+                                <option value="20">Rhône-style Red Blend</option>
+                                <option value="21">Riesling</option>
+                                <option value="22">Rosé</option>
+                                <option value="23">Sangiovese</option>
+                                <option value="24">Sangiovese Grosso</option>
+                                <option value="25">Sauvignon Blanc</option>
+                                <option value="26">Shiraz</option>
+                                <option value="27">Sparkling Blend</option>
+                                <option value="28">Syrah</option>
+                                <option value="29">Tempranillo</option>
+                                <option value="30">Tempranillo Blend</option>
+                                <option value="31">Viognier</option>
+                                <option value="32">White Blend</option>
+                                <option value="33">Zinfandel</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-secondary btn-md">Check Quality</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row justify-content-center align-items-center text-center">
+                    <div class="col-md-12 text-center outcome">
+                        <span style="color:rgba(236, 183, 104, 0.965)">
+                            <br>
+                            {{gwine.outcome}}
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+<script>
+    const $country = document.querySelector('#country');
+    $country.value = "{{gwine.country}}"
+    const $price = document.querySelector('#price');
+    $price.value = "{{gwine.price}}"
+    const $variety = document.querySelector('#variety');
+    $variety.value = "{{gwine.variety}}"
+</script>        
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</div>
+</body>
+
+</html>
+
