@@ -170,7 +170,7 @@ def resetW():
 
 def resetValuesw():
     global gwine 
-        
+       
     gwine = WWines()
 
 
